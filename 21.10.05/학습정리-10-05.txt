@@ -1,0 +1,136 @@
+1. 리터럴이란?
+
+자료형을 기반으로 표현이 되는 상수
+
+2. 아래의 내용이 에러가 나는 이유와 수정 방법은?
+System.out.println(3147483647 + 3147483648); //
+
+기본적으로 디폴트로 int형으로 저장된다. int의 경우 대략+ -21억7천까지 표현할 수 있는데 위 의 값은 그 이상이라 long 타입을 사용해야한다. 숫자 뒤에 L(l)을 적어주면 된다.  
+
+3. 자동 형변환과 명시적 형변환에 대하여 설명하시오.
+
+자동 형변환: boolean, byte, short=chant, int, long, float, double 순서로 데이터 손실을 최소화하는 방향으로 형이 변한다.
+명시적 형변환: (변화할 형)을 통해 강제적으로 형변환을 해준다.  
+
+4.아래의 에러가 나는 이유를 설명하고 수정 하시오.
+
+int a = 3;
+int b = 4;
+	
+double result = a / b;
+
+
+System.out.println(result);
+
+
+자바에서 연산의 경우 디폴트로 int형으로 저장하는데 실수의 경우 소수 부분이 소실된다. 따라서 제대로된 값이 나오지 않는다.
+변수가 int보다 큰 경우로 자동 형변화가 되므로 실수 형인 double로 강제로 형변환을 해주면 된다.
+
+ex) double result = (double)a /b; 
+
+
+5. 이스케이프 시퀀스의 종류를 나열하고 기능을 설명하시오.
+'\b' 백스페이스 문자
+'\t' 탭문자
+'\\' 백슬래시 문자
+'\'' 작은 따옴표 문자
+'\"' 큰 따옴표 문자
+'\n' 개 행 문자
+'\r' 캐리지 리턴 문자
+
+6. 아래의 출력 결과를 확인하고, 130이 나오는 이유를 설명
+System.out.println('A'); 
+System.out.println('A' + 'A');
+
+' '은 char타입. +연산의 경우 기본적으로 int형. 따라서 연산식인 'A' + 'A'의 경우 A라는 문자에 저장된 값 int 65를 인식해서 130
+
+7. 결합 방향과 우선순위에 대하여 설명하시오.
+결합 방향은 연산이 진행되는 방향
+우선 순위는 방향과 상관없이 우선 되는 순위
+
+
+8. "1초과 100미만인가?"를 코딩으로 표현하면?
+boolean quiz;
+int num;
+num = 임의의 수;
+quiz = (1 < num) && (num < 100);
+System.out.println("1초과 100미만인가? " + quiz);
+
+9. "2의 배수 또는 3의 배수?" 를 코딩으로 표현 하면?
+boolean quiz;
+int num;
+num = 임의의 수;
+quiz = ( num%2 == 0 ) || (num%3 == 0);
+System.out.println("2의 배수 또는 3의 배수? " + quiz); 
+
+
+10. 아래의 프린트 결과를 예측해 보고, 코딩 후 결과를 확인 하시오.
+class SCE {
+	public static void main(String[] args) {
+		int num1 = 0;
+		int num2 = 0;
+		boolean result;    
+
+		result = ((num1 += 10) < 0) && ((num2 += 10) > 0);
+    System.out.println("result = " + result);
+    System.out.println("num1 = " + num1);
+    System.out.println("num2 = " + num2); 
+	
+    result = ((num1 += 10) > 0) || ((num2 += 10) > 0);
+    System.out.println("result = " + result);
+    System.out.println("num1 = " + num1);
+    System.out.println("num2 = " + num2);
+	}
+}
+
+0더하기 10은 0보다 작고(false) 10더하기 0은 0보다 큰가. result = false
+num1 = 10
+num2=0
+10더하기 10은 0보다 크거나(true) 0더하기 10은 0보다 큰가? result = true
+num1 = 20
+num2 = 0
+
+num2가 왜 이런지 못 풀었었음. 
+1. &&(and 둘다 true여야 true), false가 나와서 num2와 상관없이 false라 num2는 안함.
+2. ||(or 하나만 true여도 true) true가 나와서 num2와 상관없이 true라 num2는 안함
+
+
+11.아래를 프로그래밍 하시오.
+국어 : 50
+영어 : 70
+수학 : 95
+
+총점과 평균을 구하시오.
+-단 평균은 소숫점 까지 나오도록 하시오
+
+int kor= 50;
+int eng = 70;
+int math = 95;
+int total;
+double avg;
+
+total = kor+ eng+ math;
+System.out.println("총점: " + total);
+
+avg = (double)total / 3;
+System.out.println("평균: " +avg);
+
+
+
+
+8. 32비트 시스템에서 메모리 최대 용량 8g?
+한번에 사용할 수 있는 메모리 주소가  2^32이라.
+
+32비트 시스템에서 최대 사용 할수 있는 메모리 양은?
+		32비트 시스템은
+		2의 32승에 해당되는 메모리의 주소를 가지고
+		이것은
+		2^10 *  2^10 *  2^10 * 2^2 으로 표현되고,
+		4G 에 해당함.
+		, 최대 사용 가능 메모리는 4G Byte 였지만,
+
+- 2GB 
+ ∵ 가상 주소 공간이 분할 되어있고 분할 된 영역중에 사용할 수 있는 메모리 공간이 
+    32비트일 땐 2GB 64비트일 땐 8TB 이다.
+ ☆ 이론상으론 32비트 = 4GB(2^32) 64비트 = 16EB(2^64)
+
