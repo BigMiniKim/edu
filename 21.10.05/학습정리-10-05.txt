@@ -23,7 +23,7 @@ double result = a / b;
 System.out.println(result);
 
 
-자바에서 연산의 경우 디폴트로 int형으로 저장하는데 실수의 경우 소수 부분이 소실된다. 따라서 제대로된 값이 나오지 않는다.
+int형끼리 계산하면 결과는 int. 외에도 자바에서는 연산의 경우 디폴트로 int형으로 저장하므로 그보다 큰 long과 실수 float, double의 경우 소수 부분이 소실된다. 따라서 위의 double의 경우 소수부가 소실되어 제대로된 값이 나오지 않는다.
 변수가 int보다 큰 경우로 자동 형변화가 되므로 실수 형인 double로 강제로 형변환을 해주면 된다.
 
 ex) double result = (double)a /b; 
@@ -42,7 +42,7 @@ ex) double result = (double)a /b;
 System.out.println('A'); 
 System.out.println('A' + 'A');
 
-' '은 char타입. +연산의 경우 기본적으로 int형. 따라서 연산식인 'A' + 'A'의 경우 A라는 문자에 저장된 값 int 65를 인식해서 130
+' '은 char타입. +등 연산의 경우 기본적으로 int형. 따라서 연산식인 'A' + 'A'의 경우 A라는 문자에 저장된 아스키 코드값 int 65를 인식해서 130
 
 7. 결합 방향과 우선순위에 대하여 설명하시오.
 결합 방향은 연산이 진행되는 방향
@@ -90,7 +90,7 @@ num2=0
 num1 = 20
 num2 = 0
 
-num2가 왜 이런지 못 풀었었음. 
+num2가 왜 이런지 못 풀었었음. (당일 진도 아니었음)
 1. &&(and 둘다 true여야 true), false가 나와서 num2와 상관없이 false라 num2는 안함.
 2. ||(or 하나만 true여도 true) true가 나와서 num2와 상관없이 true라 num2는 안함
 
