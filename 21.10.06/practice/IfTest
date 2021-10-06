@@ -1,0 +1,27 @@
+package java_area;
+
+public class IfTest {
+
+	public static void main(String[] args) {
+		
+		int kor = 50;
+		int eng = 60;
+		int math = 90;
+		int total = kor + eng + math;
+		
+		double avg = (double)total / 3;
+		
+		
+		if (avg >= 90) {
+			System.out.println("수");	
+		}else if (avg >= 80) {
+			System.out.println("우");	
+		}else if (avg >= 70) {
+			System.out.println("미");
+		}else if (avg >= 60) {
+			System.out.println("양");
+		}else  {
+			System.out.println("가");
+		}
+	}
+}	
