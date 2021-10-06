@@ -1,0 +1,10 @@
+public static void main(String[] args) {
+	int a = 80;
+	int b = 33;
+	int c = 55;
+		
+	int max;
+	max = a > b ? (a > c ? a : (b > c ? b : c)): b;
+	System.out.println(max);
+		
+}
