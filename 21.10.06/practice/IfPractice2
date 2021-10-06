@@ -1,0 +1,29 @@
+package java_area;
+
+public class IfPractice2 {
+
+	public static void main(String[] args) {
+		/* int 변수 3개 선언
+		  임의 값 집어 넣음
+		  그중 3개의 값중 최대값을 출력
+		  90 100 60
+		  출력: 최대값은 100입니다		 */
+
+		int result;
+		int num1 = 90;
+		int num2 = 100;
+		int num3 = 60;
+		
+		if (num1 > num2) {
+		result = num1;}
+		else if (num2 < num3) {
+			result = num3;}
+		else {result = num2;}
+				
+		System.out.println("최대값은 " + result + " 입니다");
+		
+		
+		
+	}
+
+}
