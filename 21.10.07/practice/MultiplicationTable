@@ -1,0 +1,5 @@
+	int dan = 6;
+		int i;
+
+		for (i = 1; i <= 9; i++) {
+			System.out.println(i + "*" + dan + "=" + (i * dan));
