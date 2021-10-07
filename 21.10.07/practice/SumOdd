@@ -1,0 +1,9 @@
+	int odd = 0;
+
+		for (int i = 1; i <= 10000; i++) {
+			if (i % 2 == 0) {
+				odd = odd + i;
+
+			}
+		}
+		System.out.println("홀수의 합은 " + odd);
