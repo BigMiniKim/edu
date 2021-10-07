@@ -1,0 +1,53 @@
+// 세수 중 가장 큰 수 구하기
+		int max;
+		int a = 80;
+		int b = 90;
+		int c = 100;
+				
+		//1. 첫번째 방법
+		   	if(a > b) {
+    		
+    		if( a > c) {
+    			max = a;
+    		}else {
+    			max = c;
+    		}
+    		
+    	}else {
+    		if( b > c) {
+    			max = b;
+    		}else {
+    			max = c;
+    		}    		
+    	}
+    	
+    	System.out.println(max);
+    	
+
+		
+		//2. 두번째 방법
+		if ( (a > b)  && (a > c)) {
+			max = a;
+		}else if ((b > a) && (b > c)) {
+			max = b;
+		}else {
+			max = c;
+		}
+		System.out.println(max);
+
+		//3. 세번째 방법
+		
+		max = a;
+		if(b > max) {
+			max = b;
+		}
+		if(c > max) {
+			max = c;
+		}
+		
+		System.out.println(max);
+		
+		//3항 연산자
+		
+		max = (a > b) ? (a > c ? a : c) : (b > c ? b: c);
+		System.out.println(max);
