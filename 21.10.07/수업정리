@@ -1,0 +1,37 @@
+int num = 0;
+		
+		while(num < 5) {
+			System.out.println("I Like Java " + num);
+			num++;
+		}
+		
+	//while 뒤에는 ; 붙이지 않는다	
+	
+	//do while 반드시 안에 내용을 한번은 실행 한다
+		
+		do { 
+			System.out.println("I like Java " + num );
+			num++;
+		} while(num < 5);
+	//do while 문에는 while 뒤에 ; 붙인다 
+  
+  
+  
+  
+  
+  while ((num++) < 100) {
+			
+			if (((num % 5) != 0) || ((num % 7) != 0))
+				continue; // 나머지가 0이 아니면 다시 while로 cont, 5의 배수일때 7의 나머지 확인
+			
+			count++; //5 나머지 0 확인, 7나머지 0 확인, continue 다음. 35일때
+      
+      
+      
+      if (((num % 2) == 0) && ((num % 3) == 0))
+				break; 
+        
+      if (((num % 2) != 0) || ((num % 3) != 0))
+				continue;   
+       
+        
