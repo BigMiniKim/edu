@@ -1,0 +1,132 @@
+1.  swithc 문에서 아래의 프로그래밍을 짜시오.
+
+1234 월 봄입니다.출력
+5678 월 여름입니다.출력
+9 10 11 12 월 겨울 입니다. 출력
+
+public class SwitchSeason {
+
+	public static void main(String[] args) {
+		int month = 3;
+		switch (month) {
+		case 1: case 2: case 3: case 4:
+		System.out.println("봄 입니다.");
+		break;
+		
+		case 5: case 6: case 7: case 8:
+		System.out.println("여름 입니다.");
+			break;
+			
+		case 9: case 10: case 11: case 12:
+		System.out.println("겨울 입니다.");
+			break;
+		
+		default:
+		System.out.println("월이 아닙니다");
+			break;
+		}
+		
+				
+				
+
+	}
+
+}
+
+2. 
+int num = -10 을 할당 후 해당 정수에 대한 절댓값을 출력하는 프로그램을 작성하시오.
+절대값은 양수 입니다.
+
+public class Minus10 {
+
+	public static void main(String[] args) {
+		int num = -10;
+	
+		
+		if ( num <0 ) {num = num * (-1);
+		
+		System.out.println(num);}
+		
+		else {
+		System.out.println(num);}
+				
+
+	}
+
+}
+
+
+3. while 문과 do while 문의 차이는 무엇인가요?
+do while의 경우 do 이하를 실행한뒤 while 조건을 실행한다.
+
+4. 아래에서 for 문이 실행 되는 순서를 정리하시오.
+
+for (i = 1; i <= 1000; i++){
+    sum = sum +i
+}
+1) i=1
+2) i 값이 1000보다 작은지 확인
+3) 작다면 sum 값에 +1
+4) i+1
+5) 반복하여 i값이 1000 초과
+6) sum + 1000
+7) 조건문 나옴
+
+5. 구구단 6단을 출력 하는 프로그램을 짜시오.
+	int dan = 6;
+		int i;
+
+		for (i = 1; i <= 9; i++) {
+			System.out.println(i + "*" + dan + "=" + (i * dan));
+
+6. 1부터 10000 까지의 합을 구하는 프로그램을 짜시오.
+	int sum = 0;
+		
+		for ( int i= 1; i<=10000; i++) {
+		sum = sum + i ;
+		
+		System.out.println(i + "까지의 합은" + sum);
+		
+
+
+7. 1부터 10000 까지의 숫자중 홀수 의 합을 구하는 프로그램을 짜시오.
+
+				int odd = 0; 
+				
+				for (int i = 1; i <= 10000; i++) {
+					if (i % 2 == 0) { 
+						odd = odd + i;
+					
+					}
+				}
+				System.out.println("홀수의 합은 " + odd);
+
+8. break 와 continue에 대하여 설명하시오.
+
+break를 만나면 조건문을 빠져나간다.
+continue를 만나면 조건검사로 이동한다.
+
+
+9. 1과 100 사이의 숫자중 5의 배수이자 7의 배수의 첫번재 수는(프로그램밍 하시오)
+		int i;
+
+		for (i = 1; i <= 100; i++) {
+			if (((i % 5) == 0) && ((i % 7) == 0))
+				break;
+		}
+		System.out.println(i);
+
+10. 1과 10000 사이의 숫자중 5의 배수이자 7의 배수인 수의 개수는(프로그램밍 하시오)
+
+int i = 1;
+		int count = 0;
+
+		for (i = 1; i <= 10000; i++) {
+			if (((i % 5) != 0) || ((i % 7) != 0))
+				continue;
+			count++;
+
+		}
+		System.out.println(count);
+
+
