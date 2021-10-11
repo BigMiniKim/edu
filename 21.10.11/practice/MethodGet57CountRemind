@@ -1,0 +1,21 @@
+
+public class MethodGet57CountRemind {
+
+	public static void main(String[] args) {
+		int count = get57(1, 100);
+		System.out.println(count);
+	}
+
+	public static int get57(int start, int finish) {
+
+		int count = 0;
+
+		for (int i = start; i <= finish; i++)
+			if ((i % 5 == 0) && (i % 7 == 0))
+				count++;
+
+		return count;
+
+	}
+
+}
