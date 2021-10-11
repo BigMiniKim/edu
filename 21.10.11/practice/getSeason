@@ -1,0 +1,41 @@
+
+public class getSeason {
+
+	public static void main(String[] args) {
+
+		getSeason(3);
+		
+		getSeason(12);
+		
+		getSeason(4);
+	}
+
+	public static void getSeason(int month) {
+
+		switch (month) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+			System.out.println("봄 입니다");
+			break;
+
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+			System.out.println("여름 입니다");
+			break;
+
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+			System.out.println("겨울 입니다");
+			break;
+
+		default:
+			System.out.println("월이 아닙니다");
+		}
+	}
+}
