@@ -1,0 +1,260 @@
+1. 함수는 어떻게 알아 볼수있는가?
+( 괄호 ) 앞에 온다
+
+2. 함수 호출 하는 법은?
+괄호 안에 그냥 값 
+
+3. 함수 만드는 법은?
+파라미터를 입력한다
+
+4. 리턴 타입 void 는 어떠한 경우에 쓰는가?
+리턴 값이 필요 없을 때
+
+5. 아래를 함수로 만드시오.
+
+starPrint2(5) 
+
+출력
+*****
+ ****
+  ***
+   **
+    *
+
+public class starPrint2Remind {
+
+	public static void main(String[] args) {
+
+		starPrint2(5);
+	}
+
+	public static void starPrint2(int num) {
+
+		for (int i = 1; i <= num; i++) {
+
+			for (int j = 1; j < i ; j++) {
+				System.out.print(" ");
+			}
+
+			for (int j = num; j >= i ; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+
+		}
+
+	}
+}
+5. 아래를 함수로 만드시오.
+
+starPrint3(5) 
+
+출력
+   
+    *   
+   ***
+  *****
+ *******
+*********
+
+
+public class starPrint2Remind {
+
+	public static void main(String[] args) {
+
+		starPrint3(5);
+	}
+
+	public static void starPrint3(int num) {
+
+		for (int i = 1; i <= num; i++) {
+
+			for (int j = i; j < num; j++) {
+				System.out.print(" ");
+			}
+
+			for (int j = 1; j <= (2 * i - 1); j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+
+		}
+
+	}
+}
+
+6.아래의 함수를 만드시오. 		
+
+char grade;
+double avg = 80;
+
+grade = getGrade(avg);
+
+// 우 입니다.
+System.out.println(grade + " 입니다.");
+
+
+public class MethodGradeRemind {
+
+	public static void main(String[] args) {
+		char grade;
+		double avg = 80;
+		grade = getGrade(avg);
+
+		System.out.println(grade + " 입니다.");
+
+	}
+
+	public static char getGrade(double avg) {
+
+		char grade;
+
+		if (avg >= 90) {
+			grade = '수';
+		} else if (avg >= 80) {
+			grade = '우';
+		} else if (avg >= 70) {
+			grade = '미';
+		} else if (avg >= 60) {
+			grade = '양';
+		} else {
+			grade = '가';
+		}
+
+		return grade;
+
+	}
+
+}
+
+
+7.아래의 함수를 만드시오. 
+
+int sum = getHap(1,100);
+//5050
+System.out.println(sum);
+
+public class MethodGetHapRemind {
+
+	public static void main(String[] args) {
+		int sum = getHap(1, 100);
+		System.out.println(sum);
+	}
+
+	public static int getHap(int start, int finish) {
+		int sum = 0;
+		for (int i = start; i <= finish; i++)
+			sum = sum + i;
+		return sum;
+	}
+
+}
+
+
+8.아래의 함수를 만드시오. 
+
+
+int count = get57(1,100);
+//count 는 1부터 100 까지의 숫자중 5의 배수 이자 7의 배수인 수의 갯수
+System.out.println(count );
+
+public class MethodGet57CountRemind {
+
+	public static void main(String[] args) {
+		int count = get57(1, 100);
+		System.out.println(count);
+	}
+
+	public static int get57(int start, int finish) {
+
+		int count = 0;
+
+		for (int i = start; i <= finish; i++)
+			if ((i % 5 == 0) && (i % 7 == 0))
+				count++;
+
+		return count;
+
+	}
+
+}
+
+
+9.아래의 함수를 만드시오. 
+
+printGuGudan(3)// 3단 출력
+printGuGudan(4)// 4단 출력
+
+
+public class MethodGuGUdan34remind {
+
+	public static void main(String[] args) {
+		printGuGudan(3);
+		printGuGudan(4);
+	}
+
+	public static void printGuGudan(int dan) {
+
+		for (int i = 1; i <= 9; i++) {
+			System.out.println(i + "X" + dan + "=" + (i * dan));
+		}
+
+	}
+}
+
+10.아래의 함수를 만드시오. 
+
+getRecArea(3,5) //사각형 넓이
+getRecCirlce(5) //원넓이
+getTriangleArea(4 , 5) //삼각형 넓이
+
+11. 함수로 만들면 좋은점은?
+-같은 작업을(중복) 하지 않기 위해
+-기능이 2번 이상 중복되면 반드시 함수로 만들것.
+
+12.아래의 함수를 만드시오. 
+int month = 4;
+
+getSeason(3)// 봄입니다. 출력
+printGuGudan(12)// 겨울 입니다. 출력
+
+public class getSeason {
+
+	public static void main(String[] args) {
+
+		getSeason(3);
+		
+		getSeason(12);
+		
+		getSeason(4);
+	}
+
+	public static void getSeason(int month) {
+
+		switch (month) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+			System.out.println("봄 입니다");
+			break;
+
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+			System.out.println("여름 입니다");
+			break;
+
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+			System.out.println("겨울 입니다");
+			break;
+
+		default:
+			System.out.println("월이 아닙니다");
+		}
+	}
+}
