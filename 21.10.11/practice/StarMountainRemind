@@ -1,0 +1,26 @@
+
+public class StarMountainRemind {
+
+	public static void main(String[] args) {
+		
+		/*1.바깥쪽  for문은 단순 행
+		  2.안 쪽 for문은 열을 찍음
+		  3.blank는 생각하지않고 별 갯수만큼 찍는다.
+		  4.blank가 있으면, blank를 고려하여 for문을 첨가한다.*/
+	
+		
+		for (int i = 1; i<=5; i++) {
+			
+			for(int j = i; j < 5; j++) {
+			System.out.print(" ");	
+			}
+			
+			for (int j = 1; j <=  (2 * i -1); j++ ) {
+				System.out.print("*");
+			}
+			System.out.println( );
+		}
+		
+	}
+
+}
