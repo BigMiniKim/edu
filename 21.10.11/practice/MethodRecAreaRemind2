@@ -1,0 +1,15 @@
+
+public class MethodRecAreaRemind2 {
+
+	public static void main(String[] args) {
+		int recarea = getRecArea(3, 5);
+		System.out.println(recarea);
+	}
+
+	public static int getRecArea(int sw, int sh) {
+
+		int recarea = sw * sh;
+		return recarea;
+	}
+
+}
