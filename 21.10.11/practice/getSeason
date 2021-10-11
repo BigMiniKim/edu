@@ -1,5 +1,5 @@
 
-public class getSeason {
+public class GetSeason {
 
 	public static void main(String[] args) {
 
