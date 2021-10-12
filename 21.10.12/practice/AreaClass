@@ -1,0 +1,114 @@
+
+class Circle {
+	// 인스턴스 변수 선언
+	int radius;
+
+	public void setRadius(int r) {
+		radius = r;
+	}
+
+	public int getRadius() {
+		return radius;
+	}
+
+	public double getArea() {
+		return radius * radius * Math.PI;
+	}
+}
+
+class A {
+	int num = 155;
+
+	public void printNum() {
+		System.out.println(num);
+	}
+
+}
+
+class B {
+	int sum = 100; // 인스턴스 변수(함수 밖 클래스에 있는 변수)
+
+	public void printSum() {
+
+		System.out.println(sum);
+		// 지역 변수(함수 안에 있는 변수)
+	}
+}
+
+class Rectangle {
+	int width;
+	int height;
+
+	public void setWidth(int w) {
+		width = w;
+
+	}
+
+	public int getWidth() {
+		return width;
+	}
+	public int getArea() {
+		return width * height ;
+	}
+}
+
+public class InstanceTest {
+
+	public static void main(String[] args) {
+		A a; // 변수 선언, = new A();, 데이터 타입 8+1(참조형 4바이트, 클래스명으로 오는것)
+		a = new A();
+
+		a.printNum();
+
+		B b = new B();
+		b.printSum();
+		String str;// = "오징어 게임" 참조형, 레퍼런스 타입
+		
+		
+		Rectangle rec = new Rectangle();
+		rec.width = 10;
+		rec.height = 10;
+		rec.setWidth(20);
+
+		System.out.println(rec.width);
+		System.out.println(rec.getWidth());
+		System.out.println(rec.getArea());
+
+		/*
+		 * Circle circle = new Circle(); // Circle <<대문자 클래스명
+		 * 
+		 * circle.setRadius(5);
+		 * 
+		 * int radius = circle.getRadius();
+		 * 
+		 * System.out.println(radius); System.out.println(circle.getRadius());
+		 * 
+		 * double area = circle.getArea();
+		 * 
+		 * System.out.println(area);
+		 */
+	}/*class Rectangle{
+	int width;
+	int height;
+	
+	public int getArea() {
+		return width * height;
+	}
+	
+	public int getWidth() {
+		return width;
+	}
+	public void setWidth(int width) {
+		this.width = width;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+}
+*/
+
+}
