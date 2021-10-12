@@ -247,7 +247,7 @@ public class MethodRecAreaRemind {
 int month = 4;
 
 getSeason(3)// 봄입니다. 출력
-printGuGudan(12)// 겨울 입니다. 출력
+getSeason// 겨울 입니다. 출력
 
 public class getSeason {
 
