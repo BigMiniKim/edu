@@ -207,7 +207,38 @@ public class MethodGuGUdan34remind {
 getRecArea(3,5) //사각형 넓이
 getRecCirlce(5) //원넓이
 getTriangleArea(4 , 5) //삼각형 넓이
+public class MethodRecAreaRemind {
 
+	public static void main(String[] args) {
+		int recarea = getRecArea(3, 5);
+		System.out.println(recarea);
+		
+		double circlearea = getRecCirlce(5);
+		System.out.println(circlearea);
+		
+		double triarea = getTriangleArea(4 , 5);
+		System.out.println(triarea);
+		
+	}
+
+	public static int getRecArea(int sw, int sh) {
+
+		int recarea = sw * sh;
+		return recarea;
+	}
+
+	public static double getRecCirlce(double r) {
+		final double PI = 3.14;
+		double result = (r * r * PI);
+		return result;
+	}
+	public static double getTriangleArea( int a, int b) {
+		final double tri = 2.0;
+		double triarea = (double)(a*b) / tri ;
+		return triarea;
+	}
+
+}
 11. 함수로 만들면 좋은점은?
 -같은 작업을(중복) 하지 않기 위해
 -기능이 2번 이상 중복되면 반드시 함수로 만들것.
