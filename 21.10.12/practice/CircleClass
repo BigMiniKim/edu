@@ -1,0 +1,24 @@
+class Circle2 {
+
+	int radius;
+
+	public void setRadius(int r) {
+		radius = r;
+	}
+
+	public int getRadius() {
+		return radius;
+	}
+
+	public double getArea() {
+		return radius * radius * Math.PI;
+	}
+}
+
+public class AreaTest {
+	public static void main(String[] args) {
+		Circle2 area = new Circle2();
+		area.radius = 10;
+		System.out.println(area.getArea());
+	}
+}
