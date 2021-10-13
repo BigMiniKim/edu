@@ -1,0 +1,29 @@
+class TV{
+	String brand;
+	int year;
+	int inch;
+	
+	TV(String brand, int year,int inch){
+		this.brand = brand;
+		this.year = year;
+		this.inch = inch;		
+	}
+	//LG에서 만든 2017년 32인치
+	public void show() {
+		System.out.println(brand +"에서 만든 "+ year+"년 " + inch +"인치");
+	}
+	
+}
+
+
+public class AreaTest {
+
+	public static void main(String[] args) {
+		//생성자는 멤버 변수 초기화;
+		TV myTV = new TV("LG", 2017, 32); // LG에서 만든 2017년 32인치
+
+		myTV.show();
+
+	}
+
+}
