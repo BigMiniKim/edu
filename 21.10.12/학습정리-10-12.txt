@@ -153,26 +153,22 @@ gugudan.printGugu(10); //1단부터 10단까지 출력
 gugudan.printGugu(20); //1단부터 20단까지 출력
 class Gugudan {
 	int dan;
+	
 	public void printGugu(int dan) {
 		for (int i = 1; i <= dan; i++) {
-			for (int j = 1; j < 10; j++) {
-
+			for (int j = 2; j < 10; j++) {
 				System.out.println(i + " X " + j + "=" + (i * j));
-			}
-
+			}	
 		}
-
 	}
-
+}
 	public class GugudanPrint {
 
 		public static void main(String[] args) {
 			Gugudan gugudan = new Gugudan();
 
 			gugudan.printGugu(10); // 1-10단 출력
+			
 			gugudan.printGugu(20); // 1-20단 출력
-
 		}
-
 	}
-}
