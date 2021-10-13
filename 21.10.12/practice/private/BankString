@@ -1,0 +1,31 @@
+class BankAccount {
+
+	String name = "바둑이";
+		
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	int balance = 0;
+
+	public int deposit(int amount) {
+		balance += amount;
+		return balance;
+	}
+
+	public int withdraw(int amount) {
+		balance -= amount;
+		return balance;
+
+	}
+
+	public int checkMyBalance() {
+		System.out.println("잔액 " + balance);
+		return balance;
+	}
+}
+
