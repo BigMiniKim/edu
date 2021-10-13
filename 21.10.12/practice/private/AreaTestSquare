@@ -1,0 +1,49 @@
+class Rectangle {
+	int width;
+	int height;
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getArea() {
+		return height * width;
+	}
+
+}
+
+public class AreaTestSquare {
+
+	public static void main(String[] args) {
+
+		Rectangle rec = new Rectangle();
+		rec.setHeight(20);
+		rec.setWidth(20);
+
+		System.out.println(rec.getArea());
+		
+		rec.setHeight(10);
+		rec.setWidth(30);
+
+		System.out.println(rec.getArea());
+		
+		rec.setHeight(40);
+		rec.setWidth(500);
+
+		System.out.println(rec.getArea());
+
+	}
+
+}
