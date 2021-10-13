@@ -1,0 +1,52 @@
+class Grade {
+	int math;
+	int science;
+	int english;
+	double avg;
+
+	Grade(int math, int science, int english) {
+		this.math = math;
+		this.science = science;
+		this.english = english;
+	}
+
+	public double average() {
+		avg = (math + science + english) / 3.0;
+		return avg;
+
+	}
+
+	public String getGrade() {
+
+		String grade;
+
+		if (avg >= 90)
+			grade = "수 입니다";
+		else if (avg >= 80)
+			grade = "우 입니다";
+		else if (avg >= 70)
+			grade = "미 입니다";
+		else if (avg >= 60)
+			grade = "양 입니다";
+		else
+			grade = "가 입니다";
+		return grade;
+
+	}
+}
+
+public class MyGrade {
+
+	public static void main(String[] args) {
+		int math, science, english;
+		math = 70;
+		science = 100;
+		english = 80;
+
+		Grade me = new Grade(math, science, english);
+		System.out.println("평균은 " + me.average());
+		System.out.println(me.getGrade());// 우입니다
+
+	}
+
+}
