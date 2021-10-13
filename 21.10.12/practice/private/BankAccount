@@ -1,0 +1,87 @@
+
+/*public class BankAccount2 {
+	public static void printNum(int num) {
+		System.out.println(num);
+	}
+	
+ public static void pringBank(BankAccount acc) {
+	 acc.checkMyBalance();
+ }
+	
+	public static void main(String[] args) {
+		
+		BankAccount yoon = new BankAccount();
+		BankAccount park = new BankAccount();
+		
+		System.out.println(yoon);
+		
+		yoon.deposit(5000);
+		park.deposit(3000);
+
+		
+		yoon.withdraw(2000);
+		park.withdraw(2000);
+
+		yoon.checkMyBalance();
+		park.checkMyBalance();
+		
+		printBank(yoon);
+
+	}
+
+}
+*/
+class BankAccount2 {
+	String accNumber;
+	String ssNumber;
+	int balance = 0;
+	
+	public void initAccount(String acc, String ss, int bal) {
+		accNumber = acc;
+		ssNumber = ss;
+		balance = bal;
+		}
+
+	public static void printNum(int num) {
+		System.out.println(num);
+	}
+
+	public static void printBank(BankAccount acc) { // 참조형 변수
+		acc.checkMyBalance(); // 참조형 변수 선언
+	}
+
+	public static void main(String[] args) {
+
+		BankAccount yoon = new BankAccount();
+		BankAccount park = new BankAccount();
+
+		yoon.initAccount("12-34-89", "990990-9090990", 10000);
+	
+		yoon.setName("윤윤윤");
+		park.setName("박박박");
+		
+		System.out.println(yoon.getName());
+		
+		System.out.println(yoon);
+
+		/*
+		  yoon = null; Null : 가리키는 주소 없음.- 관계를 끊는다 JVM에게 해당 메모리가 정리 대상임을 알려줌
+		  
+		  
+		  if(yoon == null) { yoon = new BankAccount(); }else {
+		 */
+
+		yoon.deposit(5000);
+		park.deposit(3000);
+
+		yoon.withdraw(2000);
+		park.withdraw(2000);
+
+		yoon.checkMyBalance();
+		park.checkMyBalance();
+
+		printBank(yoon);
+
+	}
+
+}
