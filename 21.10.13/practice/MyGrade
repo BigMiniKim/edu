@@ -1,0 +1,32 @@
+class Grade {
+	int math;
+	int science;
+	int english;
+
+	Grade(int math, int science, int english) {
+		this.math = math;
+		this.science = science;
+		this.english = english;
+	}
+
+	public double average() {
+		double average = (math + science + english) / 3.0 ;
+		return average ;
+		
+	}
+}
+
+public class MyGrade {
+
+	public static void main(String[] args) {
+		int math, science, english;
+		math = 90;
+		science = 100;
+		english = 80;
+
+		Grade me = new Grade(math, science, english);
+		System.out.println("평균은 " + me.average());
+
+	}
+
+}
