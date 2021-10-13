@@ -1,0 +1,38 @@
+
+class A {
+	int num; // 클래스 내의 변수, 인스턴스 변수
+
+	void setNum(int n) {
+		num = n;
+	}
+
+	int getNum() { //변수 값이 얼만지 확인
+		return num;
+	}
+
+	void printNum() {
+		System.out.println(num);
+	}
+}
+
+public class ObjTest {
+
+	public static void main(String[] args) {
+//int num; num = 3;
+//A a; a = new A();
+	
+		A a = new A(); // A(데이터 타입 클래스 이름) a(객체) = new A(); 객체 생성
+
+		// a.num = 10;
+		a.setNum(10);
+		a.setNum(20);
+
+		int num = a.getNum();
+		System.out.println(num);
+		
+		a.printNum(); // 출력이 10 num값을 뿌리는 함수
+
+		// System.out.println(a.num);
+	}
+
+}
