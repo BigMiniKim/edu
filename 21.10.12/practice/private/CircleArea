@@ -1,0 +1,37 @@
+
+class Circle {
+
+	double r;
+
+	public double getR() { // get r(변수) 을 대문자로 해서 getR
+		return r;
+	}
+
+	public void setR(double rad) { //void 를 하는 이유 : 값만 set해주는 역할이라 return 필요가 없음
+		r = rad;
+	}
+
+	public double getArea() {
+	//final double PI = 3.14; return r*r*PI;	
+		return r * r * Math.PI;
+	}
+}
+
+public class AreaTest2 {
+
+	public static void main(String[] args) {
+
+		Circle circle = new Circle();
+		
+		circle.setR(10);
+		
+		double area = circle.getArea();
+		System.out.println(area);
+		
+		
+		circle.setR(20);
+		
+		System.out.println(circle.getArea());
+		
+	}
+}
