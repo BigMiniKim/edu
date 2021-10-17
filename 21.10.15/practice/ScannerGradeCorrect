@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class ScanerTest5MathScienceEnglishScore {
+
+	public static void main(String[] args) {
+
+		int math, science, english;
+		
+		System.out.println("수학,과학,영어 점수 3개를 모두 입력하세요.");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		math = sc.nextInt();
+		science = sc.nextInt();
+		english = sc.nextInt();
+		
+		Grade me = new Grade(math, science, english);
+		
+		System.out.println("평균은 " + me.average());
+		System.out.println(me.getGrade()); //우 입니다.
+	}
+}
+
+
+public class Grade {
+	
+	// private 처리 하기
+	private int math, science, english;
+	private double avg;
+	
+	Grade(int math, int science, int english){
+		if(math <=0 ||  science<=0 || english<=0) {
+			System.out.println("--err--");
+			return;
+		}
+		this.math = math;
+		this.science = science;
+		this.english = english;
+	}
+	
+	double average() {
+		avg =  (math + science + english)/3.0;
+		return avg;
+	}
+	
+	String getGrade() {
+		String str;
+		
+		if(avg >=90)
+			str = "수 입니다";
+		else if(avg >= 80)
+			str =  "우 입니다";
+		else if(avg >= 70)
+			str =  "미 입니다";
+		else if(avg >= 60)
+			str =  "양 입니다";
+		else
+			str =  "가 입니다";	
+		
+		return str;
+	}
+	
+}
+
+/*https://github.com/bigheada35/edu/blob/main/01_Java/12_Static_n_Scanner/%ED%95%99%EC%8A%B5%EC%A0%95%EB%A6%AC-10-15.md(송승준님)*/
