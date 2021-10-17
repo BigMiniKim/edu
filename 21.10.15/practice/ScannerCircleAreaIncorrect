@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Scaner {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("반지름을 입력하세요");
+		
+		double radius = sc.nextDouble();
+
+		double area;
+
+		area = radius * radius * Math.PI;
+
+		System.out.println(area + " 입니다");
+
+	}
+
+}
