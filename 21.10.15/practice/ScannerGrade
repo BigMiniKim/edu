@@ -48,7 +48,7 @@ public class ScannerGrade {
 		int english = sc.nextInt();
 
 		Grade me = new Grade(math, science, english);
-		System.out.println("평균운 " + me.average());
+		System.out.println("평균은 " + me.average());
 		System.out.println(me.getGrade());
 
 	}
