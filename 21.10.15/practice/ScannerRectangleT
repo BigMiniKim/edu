@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class Rectangle {
+	private int width, height;
+
+	Rectangle(int width, int height) {// 생성자
+		this.width = width; // 초기화
+		this.height = height;
+	}
+
+	public int getRectangleArea() {
+		return width * height;
+
+	}
+}
+
+class ScannerRectangle {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("가로 세로 입력하세요");
+		int width = sc.nextInt();
+		int height = sc.nextInt();
+
+		Rectangle rec = new Rectangle(width, height);
+
+		System.out.println(rec.getRectangleArea() + " 입니다");
+
+	}
+}
