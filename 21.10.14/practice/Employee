@@ -1,0 +1,40 @@
+
+class Employee {
+
+	private String name;
+	private int age;
+	private String address;
+	private String department;
+
+	Employee(String name, int age, String address, String department) {
+		setName(name);
+		setAge(age);
+		setAddress(address);
+		setDepartment(department);
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	
+	
+	public void printInfo() {
+	
+	System.out.println("이름 : " + name);
+	System.out.println("나이 : " + age);
+	System.out.println("주소 : " + address);
+	System.out.println("부서 : " + department);
+	}
+
+}
