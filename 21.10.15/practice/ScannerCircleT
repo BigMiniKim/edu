@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class CircleArea {
+	private double r;
+
+	CircleArea(double r) {
+		this.r = r;
+	}
+
+	public double getArea() {
+		return r * r * Math.PI;
+	}
+}
+
+class ScannerCircleArea {
+	public static void main(String[] args) {
+		/*
+		 * ScannerCircleArea sc = new ScannerCircleArea (System.in); Circle5 c = new
+		 * Circle5(radius)
+		 */
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("반지름을 입력 하세요");
+		int radius = sc.nextInt();
+
+		CircleArea c = new CircleArea(radius);
+
+		System.out.println(c.getArea() + "입니다");
+
+	}
+
+}
