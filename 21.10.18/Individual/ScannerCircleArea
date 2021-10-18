@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+
+
+class CircleArea {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("반지름 입력");
+		int radius = sc.nextInt();
+		
+		Circle c = new Circle(radius);
+		
+		System.out.println(c.getArea()+ "입니다");
+
+	}
+
+}
+class Circle {
+
+	private double r;
+
+	Circle(double r) {
+		if (r <=0 ) {
+			System.out.println("잘못된 입력입니다.");
+			return;
+		}
+
+		this.r = r;
+
+	}
+
+	public double getArea() {
+		return r * r * Math.PI;
+
+	}
+}
