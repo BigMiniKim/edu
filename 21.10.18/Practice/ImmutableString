@@ -1,0 +1,38 @@
+class ImmutableString {
+
+	public static void main(String[] args) {
+//원본 보전(Immutable)
+		String str1 = "Simple String";
+		String str2 = "Simple String";
+		
+		String str3 = new String("Simple String");
+		String str4 = new String("Simple String");
+		
+		String str5 = str1 + str2;
+		//"Simple String" + "Simple String" 복사해서 결과를 새로운 곳에
+		System.out.println(str1); //원본은 보전된다
+		System.out.println(str5 == str1);
+		
+		System.out.println(str2);
+		System.out.println(str5 == str2);
+		
+		System.out.println(str5);
+		
+		if (str1 == str2)
+			System.out.println("str1과 str2는 동일 인스턴스 참조");
+		else
+			System.out.println("str1과 str2는 다른 인스턴스 참조");
+		
+		if(str3 == str4)
+			System.out.println("str3과 str4는 동일 인스턴스 참조");
+		else
+			System.out.println("str3과 str4는 다른 인스턴스 참조");
+		
+		//if ( str1 == str4) 자바 아닌 다른 언어들은 이렇게 비교함
+		if(str1.equals(str4))
+			System.out.println("같은 글자입니다");
+		else
+			System.out.println("다른 글자입니다.");
+	}
+
+}
