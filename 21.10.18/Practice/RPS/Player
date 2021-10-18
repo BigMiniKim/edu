@@ -1,0 +1,59 @@
+package test.RPS;
+
+public class Player {
+
+	// 1.가위 2.바위 3.보
+	private int rps;
+	// private String rps; 문자로 받음
+
+	public Player(String rps) {
+		// rps == "가위" < 안됨 글자비교는 equals 사용
+		if (rps.equals("가위"))
+			this.rps = 1;
+		else if (rps.equals("바위"))
+			this.rps = 2;
+		else
+			this.rps = 3;
+	}
+
+	private String getRPSString(int rps) {
+		String str = "";
+
+		if (rps == 1)
+			str = "가위";
+		else if (rps == 2)
+			str = "바위";
+		else
+			str = "보";
+		return str;
+	}
+
+	public Player() {
+		this.rps = (int) (Math.random() * 3 + 1); // 1부터 3까지 난수
+	}
+
+	public void result(Player player) {
+
+		System.out.println("나는: " + getRPSString(this.rps) + " 당신은 " + getRPSString(player.rps));
+
+		if (this.rps == player.rps) {
+			System.out.println("비겼습니다.");
+			return;
+		}
+		// 1.가위 2.바위 3.보
+		if (this.rps == 1 && player.rps == 2) {
+			System.out.println("제가 졌습니다.");
+		} else if (this.rps == 1 && player.rps == 3) {
+			System.out.println("제가 이겼습니다.");
+		} else if (this.rps == 2 && player.rps == 1) {
+			System.out.println("제가 이겼습니다.");
+		} else if (this.rps == 2 && player.rps == 3) {
+			System.out.println("제가 졌습니다.");
+		} else if (this.rps == 3 && player.rps == 1) {
+			System.out.println("제가 졌습니다.");
+		} else if (this.rps == 3 && player.rps == 2) {
+			System.out.println("제가 이겼습니다");
+		}
+
+	}
+}
