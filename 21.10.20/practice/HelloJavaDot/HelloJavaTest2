@@ -1,0 +1,28 @@
+package IndividualTest;
+
+import java.util.Scanner;
+
+public class HelloJavaTest2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String word = sc.next();
+
+			
+		int index = word.indexOf('.');
+		System.out.println(index);
+		
+		String fileName = word.substring(0, index);
+		String extention = word.substring(index+1, word.length());
+
+		System.out.println(fileName);
+		System.out.println(extention);
+		
+		//substring(0, 5);
+		//substring(점 + 1, word.length());
+		// Hello . Java
+
+	}
+
+}
