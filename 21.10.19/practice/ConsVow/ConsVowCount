@@ -1,0 +1,53 @@
+package ex.vow;
+
+public class ConsVowCount {
+
+		
+		private String word;
+		private int consonant;
+		private int vowel;
+		
+		public ConsVowCount(String word) {
+			this.word = word;
+			consonant = 0;
+			vowel = 0;			
+		}
+		
+		private void count(char ch) {
+			
+			switch (ch) {
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+			case 'A':
+			case 'E':
+			case 'I':
+			case 'O':
+			case 'U':				
+				vowel++;
+				break;
+				
+			default:
+				consonant++;			
+			}
+		}
+		
+		public void countResult() {
+			for(int i=0 ; i < word.length();i++) {
+				char ch = word.charAt(i);
+				count(ch);			
+			}	
+		System.out.println("총 글자수는 " + word.length());
+		System.out.println("모음 갯수: " + vowel);
+		System.out.println("자음 갯수: " + consonant);
+		
+		}
+		
+		
+		
+			
+
+	}
+
