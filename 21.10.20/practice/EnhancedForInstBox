@@ -1,0 +1,38 @@
+class Boxbox{
+	private int boxNum;	
+	private String contents;
+	
+	public Boxbox(int boxNum, String str) {
+		this.boxNum = boxNum;
+		this.contents = str;
+	}
+	
+	public int getBoxNum() {
+		return boxNum;
+	}
+
+	public void setBoxNum(int boxNum) {
+		this.boxNum = boxNum;
+	}
+
+	public String toString() {
+		return contents + boxNum;
+	}
+
+}
+
+class EnhancedForInst {
+	public static void main(String[] args) {
+		Boxbox[] ar = new Boxbox[5];
+		ar[0] = new Boxbox(101, "Coffee");
+		ar[1] = new Boxbox(202, "Computer");
+		ar[2] = new Boxbox(303, "Apple");
+		ar[3] = new Boxbox(404, "Dress");
+		ar[4] = new Boxbox(505, "Fairy-tale book");
+
+		for (Boxbox e : ar) {
+			if (e.getBoxNum() == 505)
+				System.out.println(e);
+		}
+	}
+}
