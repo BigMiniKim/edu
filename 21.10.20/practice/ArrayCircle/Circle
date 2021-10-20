@@ -1,0 +1,33 @@
+package Exam;
+
+public class Circle {
+
+	private double r;
+
+	public Circle(double r) {
+		this.r = r;
+	}
+
+	public double getR() {
+		return r;
+	}
+
+	public void setR(double r) {
+		this.r = r;
+	}
+
+	public double getArea() {
+		return r * r * Math.PI;
+	}
+
+	public static double getArrArea(Circle[] cirArr) {
+		double sum = 0;
+
+		for (int i = 0; i < cirArr.length; i++) {
+			sum += cirArr[i].getArea();
+			//System.out.println("반지름" + cirArr[i].getR());
+		}
+
+		return sum;
+	}
+}
