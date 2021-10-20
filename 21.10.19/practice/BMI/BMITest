@@ -1,0 +1,33 @@
+package test.individual;
+
+import java.util.Scanner;
+
+import ex.vow.BMICalculator;
+
+public class BMITest {
+
+	public static void main(String[] args) {
+
+		while (true) {
+
+			Scanner sc = new Scanner(System.in);
+
+			System.out.println("키(cm)를 입력하세요.");
+			int height = sc.nextInt();
+
+			System.out.println("체중(kg)을 입력하세요.");
+			int weight = sc.nextInt();
+
+			BMICalculator bmi = new BMICalculator(height, weight);
+			bmi.printResult();
+
+			System.out.println("계속 yes :: 중단 no");
+			String yesOrNo = sc.next();
+			if (yesOrNo.equals("yes") || yesOrNo.equals("YES"))
+				continue;
+			else
+				break;
+		}
+	}
+
+}
