@@ -1,0 +1,40 @@
+package Exam;
+
+public class CircleArrTest {
+
+	public static void main(String[] args) {
+		
+		Circle c = new Circle(3);		
+		System.out.println(c.getArea());
+		
+		Circle[] cirArr = new Circle[5];
+		
+		cirArr[0] = new Circle(1);
+		cirArr[1] = new Circle(1);
+		cirArr[2] = new Circle(1);
+		cirArr[3] = new Circle(1);
+		cirArr[4] = new Circle(1);
+		
+		//원 입력
+		for(int i=0 ;i < cirArr.length;i++) {
+			int r = (int)((Math.random()*100) +1) ; 
+			cirArr[i] = new Circle(r);			
+		}
+		
+		//총 원넓이 계산
+		double sum = 0;
+		
+		for(int i=0 ;i < cirArr.length;i++) {
+			sum +=  cirArr[i].getArea();
+			System.out.println("반지름" + cirArr[i].getR());
+		}
+		
+		System.out.println("총넓이" + sum);
+		System.out.println("총넓이" + cirArr[0].getArrArea(cirArr));
+		System.out.println("총넓이" + cirArr[1].getArrArea(cirArr));
+	}
+
+}
+ 
+
+ 
