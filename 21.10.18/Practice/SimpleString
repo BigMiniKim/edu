@@ -1,0 +1,24 @@
+
+class SimpleString {
+
+	public static void main(String[] args) { //메인함수도 satic함수
+		String str1 = new String("Simple String");
+		String str2 = "the Best String";
+		
+		System.out.println(str1);
+		System.out.println(str1.length());
+		System.out.println(); // '개 행'
+		
+		System.out.println(str2);
+		System.out.println(str2.length());
+		System.out.println();
+		
+		showString("Fynny String");
+	}
+
+	public static void showString(String str) {//static 함수 안에는 지역변수가 못옴. 먼저 사라짐
+		System.out.println(str);
+		System.out.println(str.length());
+	}
+
+}
