@@ -1,0 +1,32 @@
+package ex.vow;
+
+public class BMICalculator {
+
+	private double height;
+	private double weight;
+
+	public BMICalculator(double height, double weight) {
+		this.height = height;
+		this.weight = weight;
+
+	}
+
+	public void printResult() {
+
+		double mWeight = (height - 100) * 0.9;
+		
+		System.out.println("표준 체중은 " + mWeight + "입니다.");
+		
+		if(weight > mWeight) {
+			System.out.println("당신은 과체중입니다.");
+		}
+		else if(weight < mWeight) {
+			System.out.println("당신은 저체중입니다.");
+		}
+		else {
+			System.out.println("당신은 표준 체중입니다.");
+		}
+		
+	}
+
+}
