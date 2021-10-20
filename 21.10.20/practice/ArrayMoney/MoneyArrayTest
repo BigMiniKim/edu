@@ -1,0 +1,16 @@
+package IndividualTest;
+
+import Exam.MoneyArr;
+
+public class MoneyArrayTest {
+
+	public static void main(String[] args) {
+
+		int money = 2860;
+		
+		MoneyArr moneyArr = new MoneyArr(money);
+		moneyArr.show();
+
+	}
+
+}
