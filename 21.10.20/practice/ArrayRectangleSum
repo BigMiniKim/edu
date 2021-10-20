@@ -1,0 +1,53 @@
+package Exam;
+
+import java.util.Scanner;
+
+class Rectangle {
+	int width;
+	int height;
+
+	public Rectangle(int width, int height) {
+		this.height = height;
+		this.width = width;
+	}
+
+	public int getArea() {
+		return width * height;
+	}
+
+	public static int getArrArea(Rectangle[] recArr) {//배열만 호출, 따로 빼도 됨.
+		int sum = 0;
+		/*for(Rectangle rectangle : recArr) { rectangle[]은 안됨
+			sum = sum + rectangle.getArea();
+		}*/
+		for (int i = 0; i < recArr.length; i++) {
+			sum = sum + recArr[i].getArea();
+		}
+		return sum;
+	}
+
+}
+
+public class RectangleTest {
+
+	public static void main(String[] args) {
+
+		Rectangle[] recArr = new Rectangle[3];
+		Scanner sc = new Scanner(System.in);
+
+		for (int i = 0; i < recArr.length; i++) {
+			System.out.println("가로 세로를 입력하세요");
+			int width = sc.nextInt();
+			int height = sc.nextInt();
+
+			recArr[i] = new Rectangle(width, height);
+
+		}
+		int sum = 0;
+		for (int i = 0; i < recArr.length; i++) {
+			sum = sum + recArr[i].getArea();
+		}
+		System.out.println("총합은 " + Rectangle.getArrArea(recArr));
+	}
+
+}
