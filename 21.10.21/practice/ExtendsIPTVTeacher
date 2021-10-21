@@ -1,0 +1,63 @@
+
+class TV1 {
+	private int size;
+
+	public TV1(int size) {
+		this.size = size;
+	}
+
+	// private -> default -> protected -> public
+
+	protected int getSize() {
+		return size;
+	}
+}
+
+/*
+ * TV를 상속받은 ColorTV 클래스 32인치 1024컬러
+ */
+class ColorTV extends TV1 {
+	private int color;
+
+	public ColorTV(int size, int color) {
+		super(size);
+		this.color = color;
+	}
+
+	public void printProperty() {
+		System.out.println(super.getSize() + "인치" + this.color + "컬러");
+	}
+
+}
+
+class IPTV extends ColorTV{
+	private String ip;
+	
+	public IPTV(String ip , int size, int color) {		
+		super(size, color);		
+		this.ip = ip;		
+	}
+	
+	public void printProperty(){
+		System.out.print(ip + " 주소에 ");
+		super.printProperty();
+		
+	}
+	
+}
+//[2번] 다음 main() 메소드와 실행 결과를 참고하여 
+//ColorTV를 상속받는 IPTV 클래스를 작성하라.
+//192.1.1.2 주소에 32인치, 2048컬러
+
+public class ObjTest {
+
+	public static void main(String[] args) {
+		ColorTV myTV = new ColorTV(32, 1024);
+		myTV.printProperty();
+
+		IPTV iptv = new IPTV("192.1.1.2", 32, 2048);
+		iptv.printProperty();
+
+	}
+
+}
