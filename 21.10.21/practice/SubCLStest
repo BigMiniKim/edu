@@ -1,0 +1,33 @@
+package test.individual;
+
+class SuperCLS {
+	protected static int count = 0;
+
+	public SuperCLS() {
+	count++;
+	System.out.println("호출?");
+}
+}
+//SubCLS obj3 = new SubCLS();
+//obj3.showCount();
+class SubCLS extends SuperCLS {
+	/*public SubCLS(){	
+	 super():
+	} 내가 부모에 있는 생성자 호출을 하지 않으면 컴파일러가 디폴트 생성자를 넣어줌.  */
+	
+	public void showCount() {
+		System.out.println(count);
+	}
+}
+
+public class SubCLStest {
+
+	public static void main(String[] args) {
+		SuperCLS obj1 = new SuperCLS();
+		SuperCLS obj2 = new SuperCLS();
+		
+		SubCLS obj3 = new SubCLS();
+		obj3.showCount();
+	}
+
+}
