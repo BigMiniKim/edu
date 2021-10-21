@@ -1,0 +1,29 @@
+package test.individual;
+
+
+class IPTV extends ColorTV {
+	private String ipaddr; 
+
+	public IPTV(String ipaddr, int size, int color) {		
+		super(size, color);
+		this.ipaddr = ipaddr;
+	}
+
+	public void printProperty() {
+		System.out.print(ipaddr + " 주소에 ");
+		super.printProperty();
+		
+	}
+
+}
+
+public class IPTVTest {
+	// [2번] 다음 main() 메소드와 실행 결과를 참고하여
+	// ColorTV를 상속받는 IPTV 클래스를 작성하라.
+	// 192.1.1.2 주소에 32인치, 2048컬러
+	public static void main(String[] args) {
+		IPTV iptv = new IPTV("192.1.1.2", 32, 2048);
+
+		iptv.printProperty();
+	}
+}
