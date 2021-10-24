@@ -1,0 +1,28 @@
+package ex.main;
+
+import ex.shape.Circle;
+import ex.shape.Rectangle;
+import ex.shape.Triangle;
+import ex.shape.Shape;
+
+public class PolyCircleRectangle {
+
+	public static void main(String[] args) {
+
+		Shape[] shape = { new Circle(10), new Rectangle(10, 10), new Triangle(10, 10) };
+		double sum = 0;
+		for (Shape shape2 : shape) {
+			sum = sum + shape2.getArea();
+		}
+
+		System.out.println(sum);
+
+		/*Circle circle = new Circle(10);
+		Rectangle rec = new Rectangle(10, 10);
+
+		double totalArea = circle.getArea() + rec.getArea(); // totalArea = totalArea + rec.getArea();
+		System.out.println(totalArea);*/
+
+	}
+
+}
