@@ -1,0 +1,58 @@
+package ex.main;
+
+//새
+//참새
+//비둘기
+//고무새
+class Bird {
+	public void fly() {
+		System.out.println("새는 날아다닙니다.");
+	}
+
+}
+
+class Sparow extends Bird {
+	public void fly() {
+		System.out.println("한번에 100미터만 날아다닙니다");
+	}
+}
+
+class Pigeon extends Bird {
+	public void fly() {
+		System.out.println("한번에 2000미터만 날아다닙니다");
+	}
+}
+
+class RubBird extends Bird {
+	public void fly() {
+		System.out.println("날지 못합니다");
+	}
+}
+
+public class PolyTest {
+
+	public static void main(String[] args) {
+		/*
+		 * Sparow sparow = new Sparow(); sparow.fly();
+		 * 
+		 * Pigeon pigeon = new Pigeon(); pigeon.fly();
+		 */
+		Bird bird = new Bird();
+		bird.fly();
+
+		bird = new Sparow();
+		bird.fly();
+
+		bird = new Pigeon();
+		bird.fly();
+
+		//int[] arrInt = { 3, 6, 9 };
+
+		Bird[] arrBir = { new Bird(), new Sparow(), new Pigeon() }; // 초기화
+
+		for (Bird bird2 : arrBir) {
+			bird2.fly();
+		}
+	}
+
+}
