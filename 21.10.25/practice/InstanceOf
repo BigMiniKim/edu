@@ -1,0 +1,67 @@
+package individual.test;
+
+class Box {
+	public void simpleWrap() {
+		System.out.println("Simple Wrapping");
+
+	}
+}
+
+class PaperBox extends Box {
+
+	public void paperWrap() {
+
+		System.out.println("Paper Wrapping");
+
+	}
+
+}
+
+class GoldPaperBox extends PaperBox {
+
+	public void goldWrap() {
+		System.out.println("Gold Wrdpping");
+	}
+
+}
+
+public class InstanceOf {
+
+	public static void main(String[] args) {
+		Box box1 = new Box();
+		PaperBox box2 = new PaperBox();
+		GoldPaperBox box3 = new GoldPaperBox();
+
+		wrapBox(box1);
+		wrapBox(box2);
+		wrapBox(box3);
+
+		// 참조형도 강제 형변환이 된다. 원래 생성될 때 자식이 new 되어(메모리에) 올라가 있어야 함.
+		// 자식=(자식)부모 강제 형변환 적용
+
+		// ((PaperBox)box).paperWrap();
+		
+		// PaperBox pb = (PaperBox)box;
+		// pb.paperWrap();
+		// ((PaperBox)box).paperWrap();
+	}
+
+	public static void wrapBox(Box box) {
+		if (box instanceof GoldPaperBox) {
+			((GoldPaperBox) box).goldWrap();
+
+		}
+
+		else if (box instanceof PaperBox) {
+			((PaperBox) box).paperWrap();
+		}
+
+		else {
+
+			box.simpleWrap();
+
+		}
+
+	}
+
+}
