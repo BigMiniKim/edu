@@ -1,0 +1,57 @@
+package individual.test;
+
+class Employee {
+	private String name, addr, dept;
+	private int age;
+	protected int salary;
+
+	public Employee(String name, int age, String addr, String dept) {
+		this.name = name;
+		this.age = age;
+		this.addr = addr;
+		this.dept = dept;
+
+	}
+
+	public void printInfo() {
+
+		System.out.println("이름 " + name);
+		System.out.println("주소 " + addr);
+		System.out.println("부서 " + dept);
+		System.out.println("나이 " + age);
+	}
+}
+
+class Regular extends Employee {
+
+	public Regular(String name, int age, String addr, String dept) {
+		super(name, age, addr, dept);
+
+	}
+
+	public void setSalary(int salary) {
+		super.salary = salary;
+
+	}
+
+	public void printInfo() {
+		super.printInfo();
+		System.out.println("정규직 월급 " + super.salary);
+
+	}
+
+}
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+
+		Employee employee = new Employee("홍길동", 30, "New York", "IT");
+		employee.printInfo();
+
+		Regular regular = new Regular("바둑이", 33, "Seoul", "Ad");
+		regular.setSalary(10000);
+		regular.printInfo();
+	}
+
+}
