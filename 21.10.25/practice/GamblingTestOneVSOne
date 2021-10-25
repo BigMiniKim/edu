@@ -1,0 +1,77 @@
+package individual.test;
+
+import java.util.Scanner;
+
+class Person {
+	private String name;
+	private int num1, num2, num3;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Person(String name) {
+		this.name = name;
+
+	}
+
+	public boolean game() {
+
+		num1 = (int) (Math.random() * 3 + 1);
+		num2 = (int) (Math.random() * 3 + 1);
+		num3 = (int) (Math.random() * 3 + 1);
+
+		System.out.println("\t" + num1 + "\t"  + num2 + "\t" + num3   );
+		
+		if (num1 == num2 && num2 == num3) {
+			return true;
+		}
+		return false;
+
+	}
+
+}
+
+public class GamblingTest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("1번째 선수 이름 >> ");
+		String name = sc.next();
+		Person p1 = new Person(name);
+
+		System.out.println("2번째 선수 이름 >> ");
+		name = sc.next();
+		Person p2 = new Person(name);
+
+		String buffer = sc.nextLine();
+
+		while (true) {
+			System.out.print("[" + p1.getName() + "]:");
+			// 엔터를 받아내기 위한 입력
+			buffer = sc.nextLine();
+
+			if (p1.game()) {
+				System.out.println("[" + p1.getName() + "]:" + "님이 이겼습니다.");
+				break;
+			}
+			System.out.println("아쉽군요");
+
+			System.out.print("[" + p2.getName() + "]:");
+			// 엔터를 받아내기 위한 입력
+			buffer = sc.nextLine();
+			
+			if (p2.game()) {
+				System.out.println("[" + p2.getName() + "]:" + "님이 이겼습니다.");
+				break;
+			}
+			System.out.println("아쉽군요");
+
+		}
+	}
+}
