@@ -1,0 +1,63 @@
+다형성 : 상속받았을 때 부모는 자식을 받을 수 있다.
+공통적인 부분은 부모로 묶어둔다.
+
+컴파일러가 해주는 것들
+	1. 자동 형변환
+	2. 디폴트 생성자
+	3. 상속시 디폴트 super 생성자
+	4. extends Object
+	
+ex)	class A extends Object
+  	public A() {
+	  super();
+	  }
+
+Object
+	1. equals
+	2. hashcode
+	3. toString
+
+	//interface가 나오게 된 배경
+	//자바는 기본적으로 단일 상속
+	//다중상속 지원을 위해
+	
+	//인터페이스 활용 => 약속, 규약, 강제 => 표준 (외주 줄때, 갑이)
+	//그럼 위에 것을 어떻게 소스로 표현하느냐?
+	
+	interface Printable {
+		// public final int max =100; //인터페이스 뒤에 상수, 추상 메소드( 추상 함수)가 올 수 있다.
+		void print(String doc);// 함수 선언만 가능 abstract 뒤에 {바디} 가 못 온다.
+								// 바디 실제 구현 부분이 없음
+								// public abstract 는 생략이 가능, 없으면 컴파일러가 붙여줌 public abstract void print(String doc);
+								// abstract = 자손이 구현하라
+	}
+	
+	class A {
+		private int a; // 데이터와
+	
+		public void aa() { // 함수 명
+		}
+	
+	}
+	
+	class B {
+	
+	}
+	
+	class Printer implements Printable { // implement인터페이스에 있는 내용을 구현하라 class extends = interface implements
+	
+		@Override
+		public void print(String doc) {
+			System.out.println(doc);
+		}
+	
+	}
+	
+	public class InterfaceTest {
+		public static void main(String[] args) {
+			Printable printable = new Printer(); // 부모 = 자식
+			printable.print("Hello World");
+	
+		}
+	
+	}
