@@ -1,0 +1,79 @@
+package test.individual;
+
+interface AreaGetable {
+	double getArea();
+}
+
+/*
+ * 아래의 인터페이스에 맞추어(상속하여) 아래를 프로그래밍 하시오.
+ * 
+ * Circle, Rectangle , Triangle
+ * 
+ * 
+ * 
+ * 
+ * 
+ * main()
+ */
+class Circle implements AreaGetable {
+
+	private double radius;
+
+	public Circle(double radius) {
+		this.radius = radius;
+	}
+
+	public double getArea() {
+		return radius * radius * Math.PI;
+	}
+
+}
+
+class Rectangle implements AreaGetable {
+
+	private double width;
+	private double height;
+
+	public Rectangle(double width, double height) {
+		this.width = width;
+		this.height = height;
+	}
+
+	public double getArea() {
+		return width * height;
+	}
+
+}
+
+class Triangle implements AreaGetable {
+
+	private double twidth;
+	private double theight;
+
+	public Triangle(double twidth, double theight) {
+		this.twidth = twidth;
+		this.theight = theight;
+	}
+
+	public double getArea() {
+		return twidth * theight / 2.0;
+	}
+
+}
+
+public class InterfaceShape {
+
+	public static void main(String[] args) {
+		
+
+			AreaGetable area = new Circle(4);
+			System.out.println(area.getArea());
+
+			area = new Rectangle(4,5);
+			System.out.println(area.getArea());
+
+			area = new Triangle(4,5);
+			System.out.println(area.getArea());
+			}
+}
+
