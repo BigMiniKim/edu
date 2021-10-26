@@ -1,0 +1,42 @@
+//누군가가(갑님께서 = MS OS) 표쥰, 뀨약, 깡제 이것 밖에 없음
+//그럼 위에것을 어떠케 소스로 표현 하는냐?
+interface Printable {
+    public void print(String doc);
+}
+
+class SPrinterDriver implements Printable {
+    @Override
+    public void print(String doc) {
+        System.out.println("From Samsung printer");
+        System.out.println(doc);
+    }
+}
+
+class LPrinterDriver implements Printable {
+    @Override
+    public void print(String doc) {
+        System.out.println("From LG printer");
+        System.out.println(doc);
+    }
+}
+
+
+
+
+
+class PrinterDriver {
+    public static void main(String[] args) {
+
+            String myDoc = "This is a report about...";
+    
+        // 삼성 프린터로 출력
+        Printable prn = new SPrinterDriver();
+        prn.print(myDoc);
+
+        System.out.println();
+
+        // LG 프린터로 출력
+        prn = new LPrinterDriver();
+        prn.print(myDoc);
+    }
+}
