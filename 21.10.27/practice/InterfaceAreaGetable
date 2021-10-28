@@ -1,0 +1,70 @@
+package Shape;
+
+interface AreaGetable {
+	public abstract double getArea();
+
+}
+
+class Circle implements AreaGetable {
+	private double r;
+
+	public Circle(double r) {
+		this.r = r;
+	}
+
+	@Override
+	public double getArea() {
+
+		return r * r * Math.PI;
+	}
+
+}
+
+class Rectangle implements AreaGetable {
+	private double width, height;
+
+	public Rectangle(double width, double height) {
+		this.height = height;
+		this.width = width;
+
+	}
+
+	@Override
+	public double getArea() {
+
+		return width * height;
+	}
+}
+
+class Triangle implements AreaGetable {
+	private double width, height;
+
+	public Triangle(double width, double height) {
+		this.height = height;
+		this.width = width;
+
+	}
+
+	@Override
+	public double getArea() {
+
+		return width * height / 2.0;
+	}
+}
+
+public class ShapeMain {
+
+	public static void main(String[] args) {
+
+		AreaGetable area = new Circle(4);
+		System.out.println(area.getArea());
+
+		area = new Rectangle(4, 5);
+		System.out.println(area.getArea());
+
+		area = new Triangle(4, 5);
+		System.out.println(area.getArea());
+
+	}
+
+}
