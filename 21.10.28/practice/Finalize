@@ -1,0 +1,38 @@
+package test.individaul;
+
+class Person {
+	String name;
+
+	public Person(String name) {
+
+		this.name = name;
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		super.finalize();
+		// 메모리에서 사라질때 해야 할 일이 있다.
+		// 파일로 기록해야 한다.
+
+		System.out.println("destroyed: " + name);
+		System.out.println("파일로 기록되어 있음");
+	}
+}
+
+public class ObjectFinal {
+
+	public static void main(String[] args) {
+		Person p1 = new Person("Yoon");
+		Person p2 = new Person("Park");
+
+		p1 = null;
+		p2 = null;
+		
+		System.gc();//메모리를 정리하라
+		//System.runFinalization();
+		
+		System.out.println("end of game");
+
+	}
+
+}
