@@ -1,0 +1,63 @@
+package Shape;
+
+interface Sea {
+}
+
+interface Ground {
+}
+
+interface Locable {
+	void printLive();
+}
+
+class Fish implements Locable, Sea {
+
+	@Override
+	public void printLive() {
+		System.out.println("바다에 삽니다.");
+	}
+}
+
+class Tiger implements Locable, Ground {
+
+	@Override
+	public void printLive() {
+		System.out.println("육지에 삽니다.");
+	}
+}
+
+class InstanceOf {
+
+	public static void checkLocation(Locable loc) {
+		if (loc instanceof Sea) {
+			System.out.println("바다에 삽니다.");
+		} else if (loc instanceof Ground) {
+			System.out.println("육지에 삽니다.");
+		} else {
+			System.out.println("하늘에 살겠지");
+		}
+	}
+
+	public static void main(String[] args) {
+		/*Locable loc1 = new Fish();
+		Locable loc2 = new Tiger();
+
+		checkLocation(loc1);
+		checkLocation(loc2);*/
+		
+		Fish fish = new Fish();
+		Tiger tiger = new Tiger();
+		
+		checkLocation(fish);
+		checkLocation(tiger);
+
+		/*if (loc1 instanceof Sea) {
+			System.out.println("바다에 삽니다.");
+		} else if (loc1 instanceof Ground) {
+			System.out.println("육지에 삽니다.");
+		} else {
+			System.out.println("하늘에 살겠지");
+
+		}*/
+	}
+}
