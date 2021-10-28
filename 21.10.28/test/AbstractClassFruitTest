@@ -1,0 +1,41 @@
+package test.individaul;
+
+abstract class Fruit { // 추상 클래스
+	 abstract void print(); // 추상 메소드
+}
+ 
+class Grape extends Fruit {
+	@Override
+	public void print( ) {
+		System.out.println("나는 포도이다.");
+	}
+	
+}
+
+class Apple extends Fruit {
+	@Override
+	public void print( ) {
+		System.out.println("나는 사과이다.");
+	}
+	
+}
+class Pear extends Fruit {
+	@Override
+	public void print( ) {
+		System.out.println("나는 배이다.");
+	}
+	
+}
+
+
+class FuritTest {
+
+	public static void main(String[] args) {
+		Fruit fAry[] = {new Grape(), new Apple(), new Pear()};
+		for(Fruit f : fAry)
+		f.print();
+
+
+	}
+
+}
