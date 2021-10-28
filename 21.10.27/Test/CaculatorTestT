@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class CalculatorTest {
+	public static void main(String[] args) {
+
+		int num1 = 0;
+		int num2 = 0;
+		int result = 0;
+		String op = null;
+
+		while (true) {
+
+			try {
+
+				Scanner scan = new Scanner(System.in);
+
+				System.out.println("*** 계산기 ***"); // 타이틀 출력
+				System.out.print("수1 : ");
+				num1 = scan.nextInt();
+
+				System.out.print("수2 : ");
+				num2 = scan.nextInt();
+
+				System.out.print("연산 : ");
+				op = scan.next();
+
+				switch (op) {
+				case "+":
+					result = num1 + num2;
+					break;
+				case "-":
+					result = num1 - num2;
+					break;
+				case "*":
+					result = num1 * num2;
+					break;
+				case "/":
+					result = num1 / num2;
+					break;
+
+				default:
+					System.out.println("잘못된 연산자 입력입니다.");
+					result = 0;
+				}
+
+				System.out.println("계산 결과 : " + result);
+
+				System.out.println("계속 하시겠습니까? 계속 : Y , 종료 : N");
+				String finish = scan.next();
+
+				if (finish.equals("N") || finish.equals("n")) {
+					break;
+				}
+			} catch (Exception e) {
+				System.out.println("잘못된 입력입니다. 처음부터 다시 입력해 주세요");
+				continue;
+			}
+
+		} // while (true)
+
+		System.out.println("프로그램 종료 입니다.");
+	}
+}
