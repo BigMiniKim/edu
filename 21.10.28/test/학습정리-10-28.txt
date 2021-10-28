@@ -1,0 +1,60 @@
+1. 에러(Error)와 예외(Exception)의 차이는?
+2. unchecked 와 checked 예외의 차이는?
+
+3. 예외처리(Exception Handling) UML(상속도)참고하여  그리시오.
+4. throws 에 대하여 설명하시오.
+
+5. 아래가 컴파일 에러가 나는 이유에 대하여 설명하시오.
+try {
+		int num = 6 / 0;
+} catch (Exception e) {
+		e.printStackTrace();
+} catch (InputMismatchException e) {
+		e.printStackTrace();
+}
+
+
+6. 사칙연산 계산기를 아래의 조건으로 짜시오.
+interface ICalculator {
+	int add(int x, int y);
+	int sub(int x, int y);
+	int mul(int x, int y);
+	int div(int x, int y);
+}
+
+public class CalculatorMain {
+
+	public static void main(String[] args) {
+		ICalculator cal = new Calculator();
+
+		//출력결과 참고 하여 try catch 를 적절히 넣을것  
+			System.out.println(cal.add(6, 5));
+			System.out.println(cal.sub(6, 5));	
+			System.out.println(cal.mul(6, 5));	
+			System.out.println(cal.div(6, 0));
+
+	}
+}
+
+/*
+================================================
+11
+1
+30
+java.lang.ArithmeticException: / by zero
+	at Calculator.div(CalculatorMain.java:32)
+	at CalculatorMain.main(CalculatorMain.java:45)
+계산기 종료
+*/
+7.과일, 사과, 배, 포도를 표현한 클래스를 만들고 이들 간의 관계를 고려하여 하나의 클래스를 추상 클래스로 만들어 메소드 print()를 구현하고 
+다음과 같은 소스와 결과가 나오도록 클래스를 작성하시오.
+- 소스
+Fruit fAry[] = {new Grape(), new Apple(), new Pear());
+for(Fruit f : fAry)
+f.print();
+
+- 결과
+나는 포도이다.
+나는 사과이다.
+나는 배이다.
+
