@@ -1,0 +1,40 @@
+package test.individual;
+
+//boolean equals(Object obj)
+//return (this == obj); 주소값만 비교
+
+class Person {
+	String name;
+
+	Person (String name){
+		this.name=name;
+}
+
+public class ObjectFinal {
+	public void getObj(Object obj) {
+	
+}
+
+	public static void main(String[] args) {
+		Person park = new Person("park" );
+		Person yoon = new Person("yoon");
+		
+		//String str1(2000) = new String("LLL");
+		//String str2(3000) = new String("LLL");
+
+		getObj(str1);
+		if(str1.equals(str2))
+		
+		String str = "Spring";
+		
+		String str2 = "fall"
+
+		boolean bool = park.equals(park);
+		boolean bool = park.equals(str);
+		//boolean bool = str.equals(str2);  false
+		
+		System.out.println(bool);
+
+	}
+
+}
