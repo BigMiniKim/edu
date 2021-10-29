@@ -1,0 +1,46 @@
+package no_Point;
+
+
+class MyPoint {
+	private int pointX;
+	private int pointY;
+
+	@Override
+	public String toString() {
+		return "Point(" + pointX + "," + pointY + ")";
+	  //return pointX + pointY;	
+	}
+
+	public MyPoint(int pointX, int pointY) {
+		this.pointX = pointX;
+		this.pointY = pointY;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		MyPoint point = (MyPoint) obj;
+		if (this.pointX == point.pointX && this.pointY == ((MyPoint) obj).pointY)
+			return true;
+		else
+			return false;
+	
+	
+		
+		
+	}
+}
+
+public class MyPointTest {
+
+	public static void main(String[] args) {
+		MyPoint p = new MyPoint(3, 50);
+		MyPoint q = new MyPoint(4, 50);
+
+		System.out.println(p);
+
+		if (p.equals(q))
+			System.out.println("같은 점");
+		else
+			System.out.println("다른 점");
+	}
+}
