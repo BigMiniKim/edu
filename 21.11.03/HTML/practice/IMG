@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><img src="Navi_dr.png" alt="엑박"></p>
+
+    <p><img src="http:///www.sba.seoul.kr/kr/images/header/Navi_dr.png" alt=""></p>
+    <p><img src="http:///www.sba.seoul.kr/kr/images/header/Navi_dr.png1" alt="잘못된 이미지"></p>
+
+
+    <p><img src="Navi_dr.png" width="500"></p>
+<audio src="34ex1.mp3" controls = "controls" autoplay="autoplay" loop ="loop"></audio>
+
+</body>
+</html>
