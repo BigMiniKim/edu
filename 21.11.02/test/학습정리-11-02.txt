@@ -1,0 +1,49 @@
+1. 아래의 결과 값은 false 출력이 된다. true 가 되도록 INum을짜시오.
+
+  INum[] ar1 = new INum[3];
+  INum[] ar2 = new INum[3];
+
+  ar1[0] = new INum(1); ar2[0] = new INum(1);
+  ar1[1] = new INum(2); ar2[1] = new INum(2);
+  ar1[2] = new INum(3); ar2[2] = new INum(3);
+
+  System.out.println(Arrays.equals(ar1, ar2));
+
+2. 아래에서 정렬이 이름 순으로 되게끔 하시오. Person 객체를 만드시오.
+
+class ArrayObjSearch {
+	public static void main(String[] args) {
+
+		Person[] ar = new Person[3];    
+		ar[0] = new Person("Lee", 29);
+    ar[1] = new Person("Goo", 15);
+    ar[2] = new Person("Soo", 37);
+
+    Arrays.sort(ar);
+	}
+}
+
+3.위의 문제에서 사람의 이름 글자 수가 많은 순으로 정렬을 되게끔 person 객체를 만드시오.
+
+4.아래의 문자열을 ":" 구분자로 하여, PM 08 45 를 차례로 출력하는 프로그램을 작성 하시오.
+"PM:08:45"
+
+5. 아래를 넓이 순서대로 출력하게끔 하시오.
+      Rectangle[] recArr = {new Rectangle(6, 6),new Rectangle(5, 5),new Rectangle(10, 10),new Rectangle(12, 12),new Rectangle(11, 11)};
+      
+
+	      Arrays.sort(recArr);      
+	    
+	      
+	      for ( Rectangle rec: recArr) {
+	         System.out.println(rec.getArea());
+	      }
+
+
+6. html 에서
+아래의 태그를 설명하시오.
+-<br>
+-<li>
+-<ol>
+-<ul>
+
