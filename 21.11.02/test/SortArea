@@ -1,0 +1,47 @@
+package individual.test;
+
+import java.util.Arrays;
+
+class Rectangle2 implements Comparable {
+	private int width;
+	private int heigth;
+
+	public Rectangle2(int width, int heigth) {
+		this.width = width;
+		this.heigth = heigth;
+	}
+
+	public int getArea() {
+		return width * heigth;
+	}
+
+	@Override
+	public String toString() {
+		
+		return String.valueOf(getArea());
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		 return this.getArea() - ((Rectangle2)o).getArea();
+		//return ((Rectangle) o).getArea() - this.getArea();
+	}
+}
+
+public class SortArea {
+
+	public static void main(String[] args) {
+
+		Rectangle2[] recArr = { new Rectangle2(6, 6), new Rectangle2(5, 5), new Rectangle2(10, 10), new Rectangle2(12, 12),
+				new Rectangle2(11, 11) };
+
+		Arrays.sort(recArr);
+
+		//System.out.println(Arrays.toString(recArr));
+
+		for (Rectangle2 rec : recArr) {
+			System.out.println(rec.getArea());
+		}
+	}
+
+}
