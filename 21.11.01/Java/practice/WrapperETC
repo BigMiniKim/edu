@@ -1,0 +1,33 @@
+package test.individual;
+
+public class WrapperETC {
+
+	public static void main(String[] args) {
+		Integer n1 = Integer.valueOf(5); 
+		Integer n2 = Integer.valueOf("1024");
+		Integer n3 = Integer.valueOf('7');
+		
+		String s1 = String.valueOf(false);
+		String s2 = String.valueOf(5);
+		String s3 = String.valueOf(5.0);
+		String s4 = String.valueOf(false);
+		
+		
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		
+		System.out.println("큰 수 : "+ Integer.max(n1,n2));
+		System.out.println("작은 수 : " + Integer.min(n1,n2));
+		System.out.println("합 : "+Integer.sum(n1,n2));
+		
+		
+		
+		System.out.println("2진" + Integer.toBinaryString(12));
+		System.out.println("8진" + Integer.toOctalString(12));
+		System.out.println("16진 " + Integer.toHexString(12));
+		
+		
+		
+	}
+
+}
