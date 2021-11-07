@@ -1,0 +1,79 @@
+1.Generic 이전의 코드의 문제 상황들을 예시로 설명하시오.
+2. 아래의 결과가 나오도록 프로그래밍 하시오.
+class DDBoxDemo {
+    public static void main(String[] args) {
+        DBox<String, Integer> box1 = new DBox<>();
+        box1.set("Apple", 25);
+
+        DBox<String, Integer> box2 = new DBox<>();
+        box2.set("Orange", 33);
+        
+        DDBox<DBox<String, Integer>, DBox<String, Integer>> ddbox = new DDBox<>();
+        ddbox.set(box1, box2);
+
+        System.out.println(ddbox);
+    }
+}
+
+/*
+==================
+Apple & 25
+Orange & 33
+*/
+
+
+
+3.아래와 같이 결과 값이 나오도록 만드시오.
+   public static void main(String[] args) {
+        DBox<String, Integer> box = new DBox<String, Integer>();
+        box.set("Apple", 25);
+        System.out.println(box);
+        
+        DBox<String, String> box2 = new DBox<String,String>();
+        box2.set("Apple", "Orange");
+        System.out.println(box2);
+
+Apple & 25
+Apple & Orange
+
+4. 업다운 게임을 짜시오.
+
+1. 랜덤으로 숫자를 생성 - 컴퓨터가 가짐
+2.게임을 시작 유저가 숫자를 입력
+3. 10번의 기회를 주어 맞으면 맞았다고 출력 10번의 기회가 지나면 게임 종료.
+
+출력의 예
+========================================
+
+**************
+1. 게임 시작
+2. 게임 종료
+**************
+1
+게임시작
+>>>
+50
+down
+>>>
+45
+down
+>>>
+30
+down
+>>>
+20
+down
+>>>
+10
+up
+>>>
+15
+up
+>>>
+17
+맞았다
+**************
+1. 게임 시작
+2. 게임 종료
+**************
+
