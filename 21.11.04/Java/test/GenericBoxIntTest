@@ -1,0 +1,62 @@
+package individual.test;
+
+class Box7<T>  {
+	private T ob;
+	public void set(T o) {
+		ob = o;
+	}
+	public T get() {
+		return ob;
+		}
+	
+
+}
+
+
+public class GenericBoxIntTest {
+
+	public static void swapBox(Box7<Integer> box1, Box7<Integer> box2) {
+	Integer temp = box1.get(); //Integer i = box1.get();
+	box1.set(box2.get());
+	box2.set(temp);
+	/*
+	 
+	  
+	Box7<T> temp1 = box1 ;
+	box1=box2;;
+	box2=temp1;*/
+	
+	}
+	public static<T> void swapBox2(Box7<T> box1, Box7<T> box2) {
+		T temp = box1.get(); //Integer i = box1.get();
+		box1.set(box2.get());
+		box2.set(temp);
+	}
+	
+public static void main(String[] args) {
+    Box7<Integer> box1 = new Box7<>();
+    box1.set(99); // Integer
+
+    Box7<Integer> box2 = new Box7<>();
+    box2.set(55);
+
+    System.out.println(box1.get() + " & " + box2.get());
+    swapBox(box1, box2); 
+    System.out.println(box1.get() + " & " + box2.get());
+    
+    System.out.println(box1.get() + " & " + box2.get());
+    swapBox2(box1, box2); 
+    System.out.println(box1.get() + " & " + box2.get());
+}
+
+/*출력 =========================================
+
+99 & 55
+55 & 99*/
+
+
+
+}
+
+//제네릭 쓰면 미리 데이터타입을 정해서 형변환을 안해도 됨ㅡㅡ 기존에는 오브젝트로 폴리몰티즘을 이용했는데 박스에 다 들어 갈 수 있게됨. "apple" apple
+//함수안에 있는 파라미터를 타입으로. 함수명 앞에 <> 
