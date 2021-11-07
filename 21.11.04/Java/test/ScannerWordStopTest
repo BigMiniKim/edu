@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+class TokensCount {
+	private String words;
+
+	public void run() {
+		Scanner sc = new Scanner(System.in);
+
+		while (true) {
+			try {
+				String words = sc.nextLine();
+
+				if (words.equals("그만")) {
+					System.out.println("종료합니다");
+					break;
+				}
+				StringTokenizer tokens = new StringTokenizer(words, " ");
+
+				System.out.println("어절갯수는 " + tokens.countTokens());
+
+			} catch (Exception e) {
+
+				sc.nextLine();
+				System.out.println("잘못된 입력");
+			}
+
+		}
+
+	}
+}
+
+public class ScannerStop {
+
+	public static void main(String[] args) {
+		TokensCount tk = new TokensCount();
+		tk.run();
+	}
+}
