@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #content,
+            #footer,
+            #header {
+                margin: 0, auto;
+                width: 1000px;
+                overflow: hidden;
+            }
+
+            #content .left,
+            #footer .left,
+            #header .left {
+                width: 150px;
+                height: 150px;
+                float: left;
+                background-color: lightgray;
+                border: 2px solid gray;
+            }
+            #content .center,
+            #footer .center,
+            #header .center {
+                width: 688px;
+                height: 150px;
+                float: left;
+                background-color: lightgray;
+                border: 2px solid gray;
+            }
+
+            #content .right,
+            #footer .right,
+            #header .right {
+                width: 150px;
+                height: 150px;
+                float: right;
+                background-color: lightgray;
+                border: 2px solid gray;
+            }
+            #content .center ul li {
+                list-style: none;
+                float:left;
+                font-weight: bold;
+                padding: 0 30px;
+                font-size: 20px;
+               
+            }
+
+            #content .centercenter {
+               padding: 20px;
+                clear: both;
+                }
+           
+          
+            #header .center {
+                border-radius: 0 0 10px 10px;
+            }
+            #footer .center {
+                border-radius: 10px 10px 0 0;
+            }
+            #footer .right,
+            #header .left {
+                border-radius: 10px 0 10px 0;
+            }
+            #footer .left,
+            #header .right {
+                border-radius: 0 10px 0 10px;
+            }
+            #header .center {
+                border-radius: 0 0 10px 10px;
+            }
+            #footer .center {
+                border-radius: 10px 10px 0 0;
+            }
+            #content .left {
+                border-radius: 0 10px 10px 0;
+                height: 300px;
+            }
+            #content .right {
+                border-radius: 10px 0 0 10px;
+                height: 300px;
+            }
+
+            #content .center {
+                border-radius: 10px 10px 0 0;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <div id="content">
+            <div class="left"></div>
+            <div class="center">
+                <div>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu2</li>
+                        <li>menu3</li>
+                        <li>menu4</li>
+                    </ul>
+                </div>
+
+                <div class="centercenter">
+                    <h1>하이서울브랜드</h1>
+                    <p>서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이 서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에
+                        어려움을 겪고 있는 우수기업들이 서울시가 인정한 중소기업 공동브랜드인 하이서울브랜드를 활용하여 제품 경쟁력을 강화할 수 있도록 각종 홍보
+                        마케팅을 지원하는 사업입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+
+        <div id="footer">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+
+    </body>
+</html>
