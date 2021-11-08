@@ -1,0 +1,57 @@
+package java_List;
+
+import java.util.ArrayList;
+
+/*
+- 원객체 생성
+- ArrayList 에 차례대로 반지름이 1인 원 부터 10인원을 입력.
+- 차례대로 각각의 원 넓이 출력 
+- 10개의 원넓이 합산 하여 출력.
+*/
+
+class Circle {
+	private double r;
+
+	public Circle(double r) {
+		this.r = r;
+	}
+
+	public double getArea() {
+		return r * r * Math.PI;
+	}
+	
+	public double getR() {
+		return this.r;
+	}
+}
+/*
+- 원객체 생성
+- ArrayList 에 차례대로 반지름이 1인 원 부터 10인원을 입력.
+- 차례대로 각각의 원 넓이 출력 
+- 10개의 원넓이 합산 하여 출력.
+*/
+public class CircleArrayListTest {
+	public static void main(String[] args) {
+		ArrayList<Circle> cirList = new ArrayList<>();
+		
+		for(int i=1; i<=10; i++) {
+			cirList.add(new Circle(i));
+		}
+		
+		for(int i=0; i<10; i++) {
+			Circle circle = cirList.get(i);
+			System.out.println(circle.getArea());
+		}
+		
+		double sum =0;
+		for (Circle circle : cirList) {
+			System.out.println("반지름 : "+ circle.getR() + "넓이는:" +circle.getArea());
+			sum = sum + circle.getArea();
+		}
+		
+		System.out.println("총 넓이는:" +  sum);
+		
+
+	}
+
+}
