@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        input {
+            color: green;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        input[type=text] {
+            color: orange;
+            font-size: 50px;
+            width: 200px;
+        }
+
+        img[sec] {
+            border: 5px solid green;
+
+        }
+    </style>
+    <form>
+        이름:
+        <input type="text"/>
+        <br/>
+        아이디:
+        <input type="text"/>
+        <br/>
+        비밀번호:
+        <input type="password"/>
+        <br/>
+        전화번호:
+        <input type="tel"/>
+        <br/>
+    </form>
+
+    <img src="http://www.sba.seoul.kr/kr/images/header/Navi_dr.png"/>
+    <br/>
+    <body></body>
+</html>
