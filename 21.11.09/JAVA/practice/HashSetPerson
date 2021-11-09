@@ -1,0 +1,75 @@
+package individual.test;
+
+import java.util.HashSet;
+import java.util.TreeSet;
+
+class Person implements Comparable<Person> {
+	private String name;
+	private int age;
+
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return name + "(" + age + "세)";
+
+	}
+
+	@Override
+	public int hashCode() {
+		return age % 3;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		/*
+		 * if (obj instanceof Person) { Person person = (Person) obj; if
+		 * (person.name.equals(this.name) && this.age == person.age) return true;
+		 * 
+		 * } return false;
+		 * 
+		 * } }
+		 */
+
+		if (this.age == ((Person) obj).age && this.name.equals(((Person) obj).name))
+
+			return true;
+		else
+			return false;
+	}
+	@Override
+	public int compareTo(Person p) {
+		return this.age- p.age;
+	}
+}
+
+public class HashPerson {
+	public static void main(String[] args) {
+		HashSet<Person> hSet = new HashSet<Person>();
+
+		hSet.add(new Person("LEE", 10));
+		hSet.add(new Person("LEE", 10));
+		hSet.add(new Person("PARK", 35));
+		hSet.add(new Person("PARK", 35));
+
+		System.out.println("저장된 데이터 수: " + hSet.size());
+		System.out.println(hSet);
+		
+		
+	TreeSet<Person> tree = new TreeSet<>();
+	tree.add(new Person("YOON", 37));
+	tree.add(new Person("HONG", 53));
+	tree.add(new Person("PARK", 22));
+	for(Person p : tree)
+		System.out.println(p);
+	
+	}
+}
+
+/*
+ * 저장된 데이터 수: 2 [LEE(10세), PARK(35세)]
+ */
