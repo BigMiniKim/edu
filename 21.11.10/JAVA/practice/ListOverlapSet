@@ -16,7 +16,7 @@ public class ListOverlapSet {
 		System.out.println();
 //중복된 인스턴스 걸러냄
 		HashSet<String> set = new HashSet<>(list);
-//원래대로 ArrayList<String> 인스턴스로
+//원래대로 ArrayList<String> 인스턴스로 저장물을 옮긴다.
 		list = new ArrayList<>(set);
 
 		for (String s : list)
