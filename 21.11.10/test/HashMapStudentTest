@@ -1,0 +1,124 @@
+package individual.test;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+class Student {
+	private String name;
+	private String dept;
+	private String stuNum;
+	private double avg;
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+
+	public String getStuNum() {
+		return stuNum;
+	}
+
+	public void setStuNum(String stuNum) {
+		this.stuNum = stuNum;
+	}
+
+	public Student(String name, String dept, String stuNum, double avg) {
+		this.name = name;
+		this.dept = dept;
+		this.stuNum = stuNum;
+		this.avg = avg;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "이름: " + getName() + '\n' + "학과: " + getDept() + '\n' + "학번: " + getStuNum() + '\n' + "학점 평균: "
+				+ getAvg() + '\n';
+	}
+
+	public double getAvg() {
+		return avg;
+	}
+
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+
+}
+
+//ArayList<Student> 대신, 
+//`HashMap<String, Studnet>` 
+//해시맵을 이용하여 다시 작성**하라. 해시맵에서 키는 학생 이름으로 한다.
+
+class HashMapStudentTest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		final  int STUDENT_NUM = 2;
+		 
+		HashMap<String, Student> arrStu = new HashMap<>();
+
+		System.out.println("학생 이믈, 학과, 학번, 학점 평균을 순서대로 입력하세요.");
+
+		for (int i = 0; i < STUDENT_NUM; i++) {
+			System.out.print((i + 1) + "번 >> ");
+			String stuInfo = sc.nextLine();
+
+			StringTokenizer st = new StringTokenizer(stuInfo, ",");
+			String name = st.nextToken().trim();
+			String major = st.nextToken().trim();
+			String sNumber = st.nextToken().trim();
+			double grade = Double.parseDouble(st.nextToken().trim());
+			
+			Student student = new Student(name, major, sNumber, grade);
+			arrStu.put(sNumber,student);
+		}
+		
+		Set<String> key = arrStu.keySet();
+
+		Iterator<String> it = key.iterator(); // Set을 순차검색하는 이터레이터 리턴
+        
+		while (it.hasNext()) {
+           String sNum = it.next();
+           Student student = arrStu.get(sNum); 
+           
+           System.out.println("---------------------------");
+           System.out.println("이름:" + student.getName());
+           System.out.println("학과:" + student.getDept());
+           System.out.println("학번:" + student.getStuNum());
+           System.out.println("학점평균:" + student.getAvg());
+           System.out.println("---------------------------");
+        }
+
+		while (true) {
+			System.out.print("학생번호 (종료를 원하시면 '종료'를 입력하세요.) >> ");
+			String stuName = sc.next();
+					
+			if (stuName.equals("종료"))
+				break;
+			
+			Student student = arrStu.get(stuName); 
+			
+			   System.out.println("---------------------------");
+	           System.out.println("이름:" + student.getName());
+	           System.out.println("학과:" + student.getDept());
+	           System.out.println("학번:" + student.getStuNum());
+	           System.out.println("학점평균:" + student.getAvg());
+	           System.out.println("---------------------------");
+
+		} // while(name)
+	}
+}
