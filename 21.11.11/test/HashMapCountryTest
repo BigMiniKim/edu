@@ -1,0 +1,93 @@
+package individual.test;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class CountryMap {
+	private HashMap<String, Integer> map; // <key, value>
+
+	public CountryMap() {
+		map = new HashMap<String, Integer>();
+
+	}
+
+	public HashMap<String, Integer> getMap() {
+
+		System.out.println("나라 이름과 인구를 입력하세요.(예: korea 5000)");
+		Scanner sc = new Scanner(System.in);
+		try {
+			int population = 0;
+			String country = "";
+
+			while (true) {
+				System.out.println("나라 이름, 인구>> ");
+				country = sc.next();
+				if (country.equals("그만"))
+					break;
+				population = sc.nextInt();
+				map.put(country, population);
+			}
+
+		} catch (Exception e) {
+			System.out.println("잘못된 입력입니다. 다시 입력하세요");
+			getMap();// 자기 자신을 한번 더 호출
+		}
+
+		return map;
+	}
+
+	public void setMap(HashMap<String, Integer> map) {
+		this.map = map;
+	}
+
+	public void search() {
+		try {
+			Scanner sc = new Scanner(System.in);
+			String key = "";
+			while (true) {
+				System.out.println("인구 검색>>");
+				
+				key = sc.next();
+				if (key.equals("그만"))
+					break;
+				
+				/*boolean isFind = false;
+				
+				for(Iterator<String> it = map.iterator(); it.hasNext(); ) {
+					String str = it.next();
+					if(str.equals(findNational)) {
+						isFind = true;
+						System.out.println(key + "의 인구는 " + hm.get(str));
+					}
+				}
+				if(isFind == false) {
+					System.out.println(key + " 나라는 없습니다." );
+				}*/
+				
+				else if (!map.containsKey(key)) { // 해당 글자가 키 안에 있지 않으면
+					System.out.println(key + " 나라는 없습니다.");
+					continue;
+				}
+				
+				System.out.println(key + " " + map.get(key)); // map.get(key) << value 뽑아냄
+			}
+
+		} catch (Exception e) {
+			System.out.println("잘못된 입력. 다시");
+			search();
+		}
+
+	}
+}
+
+public class HashMapCountryTest {
+
+	public static void main(String[] args) {
+		CountryMap countryMap = new CountryMap();
+		countryMap.getMap();
+		countryMap.search();
+
+	}
+
+}
