@@ -1,0 +1,39 @@
+package parctice;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+public class IOTest {
+
+	public static void main(String[] args) {
+		int i;
+		InputStream is = null;
+
+		try {
+			is = new FileInputStream("C:\\Users\\kosmo\\eclipse-workspace\\Java_1112\\src\\love2.txt");
+
+			while (true) {
+				i = is.read();
+
+				System.out.println("데이터: " + i);
+				if (i == -1)
+					break;
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (is != null)
+					is.close();
+			} catch (Exception e2) {
+
+			}
+
+		}
+
+	}
+
+}
