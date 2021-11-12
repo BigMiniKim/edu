@@ -1,0 +1,35 @@
+package parctice;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+public class OutPUtStreamTest {
+
+	public static void main(String[] args) {
+
+		OutputStream os = null; //객체를 가리키지 않는 상태. 선언만.
+
+		try {
+			os = new FileOutputStream("love2.txt");
+
+			String str = "오늘 날씨는 아주 좋습니다";
+
+			byte[] bs = str.getBytes();
+
+			os.write(bs);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (os != null)
+					os.close(); //JVM 과 OS 의 연결을 끊어줌.
+			} catch (Exception e2) {
+
+			}
+
+		}
+
+	}
+
+}
