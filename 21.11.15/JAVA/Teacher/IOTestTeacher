@@ -1,0 +1,96 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+/*
+
+love.txt 카피 문제.(좋은 아침 입니다. 를 love.txt 로 저장 -> 해당 내용을 읽어 들여 
+love2.txt 로 복사)
+*/
+class IOCopy {
+
+	public static final String FILE_NAME = "love.txt";
+
+	//ioCopy.saveWords("좋은 아침입니다.");
+	//ioCopy.copyFile("love.txt", "love2.txt");
+	
+	public boolean saveWords(String words) {
+		boolean isDone = true;
+
+		OutputStream os = null;
+
+		try {
+			os = new FileOutputStream(FILE_NAME);
+
+			byte[] buffer = words.getBytes();
+
+			os.write(buffer);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			isDone = false;
+		} finally {
+			try {
+				if (os != null)
+					os.close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+
+		}
+
+		return isDone;
+
+	}
+
+	public boolean copyFile(String src, String des) {
+		boolean isDone = true;
+
+		OutputStream os = null;
+		InputStream is = null;
+
+		try {
+
+			is = new FileInputStream(src);
+
+			byte[] buffer = is.readAllBytes();
+
+			os = new FileOutputStream(des);
+			
+			os.write(buffer);
+
+		} catch (Exception e) {
+			isDone = false;
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (os != null)
+					os.close();
+
+				if (is != null)
+					is.close();
+
+			} catch (Exception e2) {
+
+			}
+
+		}
+
+		return isDone;
+	}
+
+}
+
+public class IOTest {
+
+	public static void main(String[] args) {
+		IOCopy ioCopy = new IOCopy();
+
+		ioCopy.saveWords("좋은 아침입니다.");
+		ioCopy.copyFile("love.txt", "love2.txt");
+
+	}
+
+}
