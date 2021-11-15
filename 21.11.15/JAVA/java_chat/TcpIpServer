@@ -1,0 +1,26 @@
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class TcpIpServer {
+
+	public static void main(String[] args) {
+		String serverIP = "127.0.0.1"; //자기자신 IP
+		Socket socket = null;
+		try {
+			socket = new Socket(serverIP,7777); // 클라이언트가 찾아가서 서버 7777을 돌려라.
+			System.out.println("서버에 연결되었습니다");
+			
+
+			Sender sender = new Sender(socket); // 보내는 쪽. 쓰레드로 돌아야함. 아니면 한쪽만 돔.
+			Receiver receiver = new Receiver(socket); // 받는 쪽
+
+			sender.start();
+			receiver.start();
+
+		} catch (Exception e) {
+
+		}
+
+	}
+}
