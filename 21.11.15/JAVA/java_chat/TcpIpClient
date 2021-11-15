@@ -1,0 +1,83 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+class Receiver extends Thread { // 반드시 쓰레드로
+	Socket socket;
+	DataInputStream in;
+	String name;
+
+	Receiver(Socket socket) {
+		this.socket = socket;
+		try {
+			in = new DataInputStream(socket.getInputStream());
+
+		} catch (Exception e) {
+
+		}
+	}
+
+	public void run() {
+
+		while (in != null) {
+			try {
+				System.out.println(in.readUTF());
+			} catch (Exception e) {
+
+			}
+		}
+	}
+}
+
+class Sender extends Thread { // 반드시 쓰레드로
+	Socket socket;
+	DataOutputStream out;
+	String name;
+
+	Sender(Socket socket) {
+		this.socket = socket;
+		try {
+			out = new DataOutputStream(socket.getOutputStream());
+			name = "[" + socket.getInetAddress() + ":" + socket.getPort() + "]";
+
+		} catch (Exception e) {
+
+		}
+	}
+
+	public void run() {
+		Scanner scanner = new Scanner(System.in);
+
+		while (out != null) {
+			try {
+				out.writeUTF(name + scanner.nextLine()); // 채팅창에 친걸(엔터) 보내겠다.
+			} catch (Exception e) {
+
+			}
+		}
+	}
+}
+
+public class TcpIpClient {
+
+	public static void main(String[] args) {
+		ServerSocket serverSocket = null;
+		Socket socket = null;
+		try {
+			serverSocket = new ServerSocket(7777); // 포트번호, 7777번으로 기다리겠다
+			socket = serverSocket.accept();// 기다리는 소스 여기서 전화기를 뺌
+
+			Sender sender = new Sender(socket); // 보내는 쪽. 쓰레드로 돌아야함. 아니면 한쪽만 돔.
+			Receiver receiver = new Receiver(socket); // 받는 쪽
+
+			sender.start();
+			receiver.start();
+
+		} catch (Exception e) {
+
+		}
+
+	}
+}
