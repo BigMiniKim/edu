@@ -1,0 +1,22 @@
+package inidividual.test;
+
+import java.net.InetAddress;
+import java.util.Scanner;
+
+public class InetAderessEx {
+
+	public static void main(String[] args) {
+		System.out.println("host이름을 입력");
+		Scanner scanner = new Scanner(System.in);
+		try {
+			InetAddress inetAddress = InetAddress.getByName(scanner.next());
+			System.out.println("Computer Name: " + inetAddress.getHostName());
+			System.out.println("Computer Ip: " + inetAddress.getHostAddress());
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+}
