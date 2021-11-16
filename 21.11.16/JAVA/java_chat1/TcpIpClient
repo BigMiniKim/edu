@@ -1,0 +1,32 @@
+package java_chat;
+
+import java.io.IOException;
+import java.net.ConnectException;
+import java.net.Socket;
+
+public class TcpIpClient {
+	public static void main(String args[]) {
+
+		String serverIp = "192.168.0.39"; // 접속할 IP
+		
+
+		Socket socket = null;
+		try {
+			// 소켓을 생성하여 연결을 요청한다.
+			socket = new Socket(serverIp, 7777); // 접속해서 7777이라는 포트번호를 찾아라
+
+			System.out.println("서버에 연결되었습니다.");
+			Sender sender = new Sender(socket);
+			Receiver receiver = new Receiver(socket);
+
+			sender.start();
+			receiver.start();
+		} catch (ConnectException ce) {
+			ce.printStackTrace();
+		} catch (IOException ie) {
+			ie.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}// main
+} // class
