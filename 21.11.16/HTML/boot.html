@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="row">
+            <!-- css에서는 inline(span등) , bootstrap에서는 row만 해주면됨 -->
+            <div class="col-sm-4" style="background-color: yellow; ">3등분</div>
+            <div class="col-sm-4" style="background-color: blue; ">3등분</div>
+            <div class="col-sm-4" style="background-color: orange; ">3등분</div>
+
+        </div>
+
+        <div class="row">
+            <!-- col만 적어도 자동으로 -->
+
+            <div class="col" style="background-color: yellow; ">3등분</div>
+            <div class="col" style="background-color: blue; ">3등분</div>
+            <div class="col" style="background-color: orange; ">3등분</div>
+            <div class="col" style="background-color: purple; ">3등분</div>
+            <div class="col" style="background-color: red; ">3등분</div>
+            <div class="col" style="background-color: green; ">3등분</div>
+
+        </div>
+
+        <div class="row">
+            <!-- -sm- 반응형, 자동으로 밑으로 내려가짐, 576px까지는 유지 -->
+            <div class="col-md-10 col-sm-3" style="background-color: lavender; ">3등분</div>
+            <div class="col-md-1 col-sm-3" style="background-color: lightskyblue; ">3등분</div>
+            <div class="col-md-1 col-sm-3" style="background-color: lightseagreen; ">3등분</div>
+            
+        </div>
+    </body>
+</html>
