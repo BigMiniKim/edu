@@ -1,0 +1,21 @@
+1. 아래를 프로그래밍 하시오.
+-JSP 프로젝트 생성
+-/hello 로 치고 들어오면 Hello 를 출력하는 HelloWorld.java 서블릿 파일 작성
+-/lotto 로 치고 들어오면 로또번호 6개를  출력하는 LottoNum.java 서블릿 파일 작성
+-/gugu3 으로 치고 들어오면 구구단 3단을 출력하는 GuGu3Dan.java 서블릿 파일 작성
+-/gugudan 으로 치고 들어오면 구구단(1단~9단)을 출력하는 GuGuDan.java 서블릿 파일 작성
+
+
+2.프로토콜이란 무엇이며, 프로토콜의 종류는?
+
+3.*.jsp 가 컴파일 되는 과정을 설명하시오.
+
+4. 아래를 프로그래밍 하시오.
+
+아래의 주소를 접속시 아래가 웹브라우져에 나타나도록 하시오.
+http://localhost:8282/프로젝트명/programmer.jsp
+
+I am a programmer (웹브라우져 출력)
+
+5. HttpServlet에 대하여 설명하시오.
+6.web.xml 에 대하여 설명하시오.
