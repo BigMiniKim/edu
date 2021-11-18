@@ -1,0 +1,61 @@
+package edu.kosmo.ex;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class HelloWorld
+ */
+@WebServlet("/gugu3") // 
+public class gugu3 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public gugu3() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Hello!");
+		response.setContentType("text/html; charset=euc-kr"); //header구성
+		PrintWriter writer = response.getWriter(); // IOStream socket.getOutputstream() response
+		
+		writer.println("<html>"); //writer로 연결. 계속 해제.
+		writer.println("<head>");
+		writer.println("</head>");
+		writer.println("<body>");
+		writer.println("<h1>post방식입니다. doPost호출입니다.</h1>");
+		int dan=3;
+			for (int j =2; j<=9; j++) {
+				
+				writer.println(dan + "*" + j + "=" + (dan*j) + "<br>");
+			}
+		
+		
+		writer.println("<body>");
+		writer.println("<html>");
+		System.out.println("포스트 호출");
+		
+	}
+	
+
+}
