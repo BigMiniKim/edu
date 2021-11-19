@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+rectangle?width=&height=&
+hobby=cook&hobby=run&hobby=swim&hobby=sleep
+rectangle?width=&height=&major=eng
+<h1>Rectangle</h1>
+<form action="rectangle" method="get">
+가로<input type = "text" name="width" size="10">
+세로<input type = "text" name="height" size="10">
+
+<br/>
+<input type="checkbox" name="hobby" value="cook"> 독서
+<input type="checkbox" name="hobby" value="run"> 조깅
+<input type="checkbox" name="hobby" value="swim"> 수영
+<input type="checkbox" name="hobby" value="sleep"> 취침
+<br/>
+
+<input type="radio" name="major" value="kor"> 국어
+<input type="radio" name="major" value="eng"> 영어
+<input type="radio" name="major" value="math"> 수학
+<input type="radio" name="major" value="des"> 디자인
+<br/>
+<select name = "protocol">
+	<option value="http">http</option>
+	<option value="ftp">ftp</option>
+	<option value="smtp">smtp</option>
+	<option value="pop">pop</option>
+</select>
+<br/>
+<input type="submit" value="전송">
+<input type="reset" value="reset">
+
+</form>
+</body>
+</html>
