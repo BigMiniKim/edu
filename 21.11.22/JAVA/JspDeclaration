@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%!
+	int i = 10;
+	String str = "ABCD";
+		
+	%>
+
+	<%!
+	public int sum(int a, int b){
+		return a+b;
+	}
+	%>
+
+
+	<!--out.print("i =" + i + "<br>"); 이걸 줄인것, 출력: %=   -->
+	
+	<%= i %> <br> 
+	<%= str %> <br> 
+	<%= sum(1,5) %> <br> 
+
+	
+
+
+
+	<%
+	out.print("i =" + i + "<br>"); //소켓, 상대방 웹브라우저
+	out.print("str =" + str + "<br>");
+	out.print("sum =" + sum(1,5) + "<br>");
+	
+	System.out.println("i =" + i + "<br>"); //콘솔
+	System.out.println("str =" + str + "<br>");
+	System.out.println("sum =" + sum(1,5) + "<br>");
+	
+	%>
+</body>
+</html>
