@@ -1,0 +1,39 @@
+1. 아래를 프로그래밍 하시오.
+
+/context명/input.jsp ->이름 국어 영어 수학 (input box) 센드 버튼, 리셋버튼
+/context명/result.jsp ->이름 총점 평균
+
+2. 아래를 jsp 로 구현하시오.
+
+
+
+
+3.부트스트랩 Carousel 을 완성 하시오.(boot.html 참고)
+
+
+3. 다음을 설명하시오.
+-액션 태그 와 종류는?
+
+
+4. redirect , forward 의 차이는?
+
+5. 쿠키의 개념에 대하여 설명하시오.
+
+
+
+내일 개별진척도는
+
+위의 문제 2. 아래를 jsp 로 구현하시오. 
+
+
+개별진척도 22 번입니다.
+public static void main(String[] args) {
+                
+                int math, science, english;
+                math = 90;
+                science = 80; 
+                english = 80;
+
+                Grade me = new Grade(math, science, english);
+                System.out.println("평균은 " + me.average());
+                System.out.println(me.getGrade()); //우 입니다.
