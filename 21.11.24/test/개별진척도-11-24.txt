@@ -1,0 +1,38 @@
+개별진척도
+
+===========================================
+ 아래의 cookie_set.jsp 파일에 대하여
+cookie get 를 클릭하면 모든 쿠키 값을 출력하는 cookie_get.jsp를 만드시오.
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+        Cookie cookie = new Cookie("CookieN","CookieV"); //쿠키객체생성
+        cookie.setMaxAge(60*60); //쿠키 시간 설정
+        
+        response.addCookie(cookie);
+%>
+
+        <a href="cookie_get.jsp">cookie get</a>
+
+</body>
+</html>
+
+
+======================================
+아래의 TV 클래스를 만드시오.
+
+public static void main(String[] args) {
+        TV myTV = new TV("LG", 2017, 32); //LG에서 만든 2017년 32인치
+        myTV.show();
+}
+
+//출력
+LG에서 만든 2017년형 32인치 TV
