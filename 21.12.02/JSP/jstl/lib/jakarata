@@ -1,1 +1,2 @@
 copyt 2 lib. 2files
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
