@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Lotto {
-	private Set<Integer> lottoSet = new HashSet();
+	private Set<Integer> lottoSet = new HashSet<Integer>();
 
 	public Lotto() {
-		while (lottoset.size() != 6) {
-			int randomNum = (int) (Math.random() * 45) + 1;
+		while (lottoSet.size() != 6) {
+			int randomNum = (int) (Math.random() * 45 + 1);
 			lottoSet.add(randomNum);
 
 		}
@@ -18,7 +18,7 @@ public class Lotto {
 		return lottoSet;
 	}
 
-	public void setLottoSet(Set<Integer>)
-this.lottoSet = lottoSet;
+	public void setLottoSet(Set<Integer> lottoSet) {
+	this.lottoSet = lottoSet;
 }
 }
