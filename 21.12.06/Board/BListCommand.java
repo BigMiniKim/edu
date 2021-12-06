@@ -14,7 +14,7 @@ public class BListCommand implements BCommand { //Bcommand 상속. 자손이 구
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		BDao dao = new BDao();
 		ArrayList<BDto> dtos = dao.list(); // sql 구문 다 끌고옴. select*
-		request.setAttribute("list", dtos); //reueest 객체 안에 게시판("list",dtos)을 setAttribute 예전엔 .jsp 실무에서는 따로 command
+		request.setAttribute("list", dtos); //reueest 객체 안에 게시판("list",dtos)을 setAttribute 예전엔 .jsp 실무에서는 따로 command //3. list객체 받아옴 들어있음.
 	
 	}
 
