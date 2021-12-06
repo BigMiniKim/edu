@@ -38,7 +38,7 @@ public class BController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("doGet");
+		System.out.println("doGet"); //.do로 들어오는건 얘가 처리함
 		actionDo(request, response);
 	}
 
@@ -60,7 +60,7 @@ public class BController extends HttpServlet {
 		String viewPage = null;
 		BCommand command = null;
 		
-		String uri = request.getRequestURI();
+		String uri = request.getRequestURI(); //1.list.do를 빼오기 위한 작업
 		String conPath = request.getContextPath();
 		String com = uri.substring(conPath.length());
 		
@@ -70,11 +70,11 @@ public class BController extends HttpServlet {
 		
 		
 		if(com.equals("/list.do")) {
-			command = new BListCommand();
+			command = new BListCommand(); //2.BListcommand 객체 생성
 			command.execute(request, response);
 			viewPage = "list.jsp";
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage); //request객체에다가 viewPage를 설정하면 유저에게 viewPag?list.jsp?를 보여줌.
-		dispatcher.forward(request, response);//request, response 객체를 list.jsp에다가 forwarding
+		dispatcher.forward(request, response);//request, response 객체를 list.jsp에다가 forwarding //4.포워딩 해서 유저에게 보여줌. list.do
 	}
 }
