@@ -1,38 +1,38 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
 	<table width="500" cellpadding="0" cellspacing="0" border="1">
 		<form action="modify.do" method="post">
-			<input type="hidden" name="bId" value="${content_view.bId}">
+			<input type="hidden" name="bid" value="${content_view.bid}">
 			<tr>
-				<td> ¹øÈ£ </td>
-				<td> ${content_view.bId} </td>
+				<td> ë²ˆí˜¸ </td>
+				<td> ${content_view.bid} </td>
 			</tr>
 			<tr>
-				<td> È÷Æ® </td>
-				<td> ${content_view.bHit} </td>
+				<td> íˆíŠ¸ </td>
+				<td> ${content_view.bhit} </td>
 			</tr>
 			<tr>
-				<td> ÀÌ¸§ </td>
-				<td> <input type="text" name="bName" value="${content_view.bName}"></td>
+				<td> ì´ë¦„ </td>
+				<td> <input type="text" name="bname" value="${content_view.bname}"></td>
 			</tr>
 			<tr>
-				<td> Á¦¸ñ </td>
-				<td> <input type="text" name="bTitle" value="${content_view.bTitle}"></td>
+				<td> ì œëª© </td>
+				<td> <input type="text" name="btitle" value="${content_view.btitle}"></td>
 			</tr>
 			<tr>
-				<td> ³»¿ë </td>
-				<td> <textarea rows="10" name="bContent" >${content_view.bContent}</textarea></td>
+				<td> ë‚´ìš© </td>
+				<td> <textarea rows="10" name="bcontent" >${content_view.bcontent}</textarea></td>
 			</tr>
 			<tr >
-				<td colspan="2"> <input type="submit" value="¼öÁ¤"> &nbsp;&nbsp; <a href="list.do">¸ñ·Ïº¸±â</a> &nbsp;&nbsp; <a href="delete.do?bId=${content_view.bId}">»èÁ¦</a> &nbsp;&nbsp; <a href="reply_view.do?bId=${content_view.bId}">´äº¯</a></td>
+				<td colspan="2"> <input type="submit" value="ìˆ˜ì •"> &nbsp;&nbsp; <a href="list.do">ëª©ë¡ë³´ê¸°</a> &nbsp;&nbsp; <a href="delete.do?bid=${content_view.bid}">ì‚­ì œ</a> &nbsp;&nbsp; <a href="reply_view.do?bid=${content_view.bid}">ë‹µë³€</a></td>
 			</tr>
 		</form>
 	</table>
