@@ -69,6 +69,7 @@ public class BDao {
 
 			} catch (Exception e2) {
 				// TODO: handle exception
+			 e2.printStackTrace();
 			}
 		}
 
