@@ -26,8 +26,8 @@
 				<td><c:forEach begin="1" end="${dto.bIndent}">[Re]</c:forEach> <%--댓글 ㄴ 가로 step처리--%>
 					<a href="content_view.do?bid=${dto.bId}">${dto.bTitle}</a></td>
 
-				<td>${dto.bId}</td>
-				<td>${dto.bId}</td>
+				<td>${dto.bdate}</td>
+				<td>${dto.bhit}</td>
 			</tr>
 		</c:forEach>
 		<tr>
