@@ -10,29 +10,29 @@
 
 	<table width="500" cellpadding="0" cellspacing="0" border="1">
 		<form action="modify.do" method="post">
-			<input type="hidden" name="bid" value="${content_view.bid}">
+			<input type="hidden" name="bId" value="${content_view.bId}">
 			<tr>
-				<td> ë²ˆí˜¸ </td>
-				<td> ${content_view.bid} </td>
+				<td> ¹øÈ£ </td>
+				<td> ${content_view.bId} </td>
 			</tr>
 			<tr>
-				<td> íˆíŠ¸ </td>
-				<td> ${content_view.bhit} </td>
+				<td> È÷Æ® </td>
+				<td> ${content_view.bHit} </td>
 			</tr>
 			<tr>
-				<td> ì´ë¦„ </td>
-				<td> <input type="text" name="bname" value="${content_view.bname}"></td>
+				<td> ÀÌ¸§ </td>
+				<td> <input type="text" name="bName" value="${content_view.bName}"></td>
 			</tr>
 			<tr>
-				<td> ì œëª© </td>
-				<td> <input type="text" name="btitle" value="${content_view.btitle}"></td>
+				<td> Á¦¸ñ </td>
+				<td> <input type="text" name="bTitle" value="${content_view.bTitle}"></td>
 			</tr>
 			<tr>
-				<td> ë‚´ìš© </td>
-				<td> <textarea rows="10" name="bcontent" >${content_view.bcontent}</textarea></td>
+				<td> ³»¿ë </td>
+				<td> <textarea rows="10" name="bContent" >${content_view.bContent}</textarea></td>
 			</tr>
 			<tr >
-				<td colspan="2"> <input type="submit" value="ìˆ˜ì •"> &nbsp;&nbsp; <a href="list.do">ëª©ë¡ë³´ê¸°</a> &nbsp;&nbsp; <a href="delete.do?bid=${content_view.bid}">ì‚­ì œ</a> &nbsp;&nbsp; <a href="reply_view.do?bid=${content_view.bid}">ë‹µë³€</a></td>
+				<td colspan="2"> <input type="submit" value="¼öÁ¤"> &nbsp;&nbsp; <a href="list.do">¸ñ·Ïº¸±â</a> &nbsp;&nbsp; <a href="delete.do?bId=${content_view.bId}">»èÁ¦</a> &nbsp;&nbsp; <a href="reply_view.do?bId=${content_view.bId}">´äº¯</a></td>
 			</tr>
 		</form>
 	</table>
