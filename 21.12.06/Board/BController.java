@@ -73,7 +73,13 @@ public class BController extends HttpServlet {
 			command = new BListCommand(); //2.BListcommand 객체 생성
 			command.execute(request, response);
 			viewPage = "list.jsp";
-		}
+		} else if(com.equals("/write_view.do")) {
+			viewPage = "write_view.jsp";
+		} else if(com.equals("/write.do")) {
+			command = new BWriteCommnad(); 
+			command.execute(request, response); // insult 시키고 list.do로 가라(맨 위)
+			viewPage = "list.do";
+		}	
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage); //request객체에다가 viewPage를 설정하면 유저에게 viewPag?list.jsp?를 보여줌.
 		dispatcher.forward(request, response);//request, response 객체를 list.jsp에다가 forwarding //4.포워딩 해서 유저에게 보여줌. list.do
 	}
