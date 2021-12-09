@@ -1,0 +1,85 @@
+1.템플릿 sb_admin을 적용하여 게시판이 나오도록 하시오.
+
+
+
+==================================================================================
+
+내일 게시판은 
+
+내일 타이머 내용.
+69번 한번더 돌리 도록 하겟습니다.
+
+
+
+====================================================================================
+
+게시판 속성 강좌 
+To do list 기법
+=============================
+1. 설계도 외우기 - 2분
+2. 프로젝트 생성 - 1분 jsp_board_test5
+3. 라이브러리 집어 넣기 3 개 - 30초 
+4. DTO 만들기   - 3분
+-desc mvc_board
+-BDto - edu.kosmo.ex.dto
+5.DAO 만들기   - 5분
+-BDto - edu.kosmo.ex.dto
+- 커넥션풀 
+- list()
+- select * from mvc_board order by bGroup desc, bStep asc 
+sql 문 정리 
+
+5. Commad 인터페이스 만들기 - 1분
+- edu.kosmo.ex.command
+
+6. BListCommad class 만들기 - 3분
+-  BCommnad 상속
+-  edu.kosmo.ex.command (패기지명)
+- DAO 객체 생성
+- list 함수 호출 
+- request 객체 안에 게시판 넣기
+
+7. Servelet 객체 만들기(컨트롤러 객체 만들기) - 5분
+ - *.do 설정
+ - actionDo 함수 만들기
+ - 명령어 해석 
+	String uri = request.getRequestURI();
+	String conPath = request.getContextPath();
+	String com = uri.substring(conPath.length());
+- 명령해석후 BListCommand 객체 생성
+	if(com.equals("/list.do")) {
+		command = new BListCommnad();
+		command.execute(request, response);
+		viewPage = "list.jsp";			
+	}
+- 빠빠라치 객체 설정
+	RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
+	dispatcher.forward(request, response);	
+
+
+8.list.jsp 만들기 - 5분
+-UTF-8 ,세팅
+-지시자 jstl
+- 댓글 RE 다는 부분 주의 할것.
+-<table width="500" border="1">
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>제목</td>
+			<td>날짜</td>
+			<td>히트</td>			
+		</tr>
+	<c:forEach var="dto" items="${list}">
+		<tr>
+			<td>${dto.bid}</td>
+			<td>${dto.bname}</td>
+			<td>
+			<c:forEach begin="1" end="${dto.bindent}">[Re]</c:forEach>
+			<a href="content_view.do?bid=${dto.bid}">${dto.btitle}</a>
+</td>
+		</tr>
+
+	</c:forEach>
+
+
+
