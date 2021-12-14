@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            /*
+ 자료형: 문자, 숫자, 불리언, 함수(function), 객체(중괄호), undefined
+
+모든 것을 참조형으로 표현.
+
+function
+
+undenfined: null, 위 5개가 안 정해져있는 상태.
+
+ */
+
+            let varStr = "ABCDEF";
+            console.log("varStr : " + varStr);
+
+            let varNum1 = 123456;
+            console.log("varNum : " + varNum1);
+
+            let varBoo = false;
+            console.log("varBoo : " + varBoo);
+
+            let varFun = function fun() {};
+            /*let varFun = () => {}*/
+            console.log("var fun : " + varFun);
+
+            let varObj = {};
+            console.log("varObj : " + varObj);
+
+            let varUnd = undefined;
+            console.log("varUnd : " + varUnd);
+
+            /* javascript는 다른 프로그램 언어에 비해 자료형에대한 제약이 적다*/
+            var varTemp = "123";
+            console.log("varTemp type : " + typeof(varTemp));
+
+            varTemp = 123;
+            console.log("varTemp type : " + typeof(varTemp));
+
+            /*자료형 변환*/
+            var varType = "123";
+            console.log("varType type : " + typeof(varType));
+            console.log("varType type : " + (
+                varType + 1000
+            ));
+
+            var varType = Number(varType);/*대문자Number 는 함수가 아니고 객체를 나타내는 생성자*/
+            console.log("varType type : " + typeof(varType));
+            console.log("varType : " + (
+                varType + 1000
+            ));
+
+            var varType = String(Number(varType));
+            console.log("varType type : " + typeof(varType));
+            console.log("varType : " + (
+                varType + 1000
+            ));
+            /*할당연산자*/
+            var varTemp1 = 100;
+            var varTemp2 = 200;
+            var varTemp3 = varTemp1 + varTemp2;
+            console.log("varTemp3 : " + varTemp3);
+
+            varTemp2 = 1000;
+            varTemp3 = varTemp1 + varTemp2;
+            console.log("varTemp3 : " + varTemp3);
+
+            /*사칙 연산자 및 나머지 연산자*/
+
+            var varFirstNum = 10;
+            var varSecondNum = 4;
+            var varResult = 0;
+
+            //덧셈
+            varResult = varFirstNum + varSecondNum;
+            console.log("varResult : " + varResult);
+
+            //뺄셈
+            varResult = varFirstNum - varSecondNum;
+            console.log("varResult: " + varResult);
+
+            //나눗셈
+            varresult = varFirstNum / varSecondNum;
+            console.log("varResult : " + varResult);
+
+            //나머지
+            varResult = varFirstNum % varSecondNum;
+            console.log("varResult : " + varResult);
+
+            /*자동증감 연산자*/
+            var varIncrease = 10;
+            var varDecrease = 10;
+
+            varIncrease = ++varIncrease;
+            varDecrease = --varDecrease;
+
+            console.log("varIncrease : " + varIncrease);
+            console.log("varDecrease : " + varDecrease);
+
+            varIncrease = varIncrease++;
+            varDecrease = varDecrease--;
+
+            console.log("varIncrease : " + varIncrease);
+            console.log("varDecrease : " + varDecrease);
+
+            /*비교 연산자*/
+            varDecrease
+            var varNum = 10;
+            console.log(varNum > 11);
+            console.log(varNum < 11);
+            console.log(varNum >= 11);
+            console.log(varNum <= 11);
+            console.log(varNum == 11);
+            console.log(varNum != 11);
+
+            /*논리 연산자*/
+            var varLogic1 = true;
+            var varLogic2 = false;
+            console.log(varLogic1 && varLogic2); //참 &&거짓 > 거짓
+            console.log(varLogic1 || varLogic2); // 참||거짓 >참
+
+            varLogic = true;
+            varLogic2 = true;
+            console.log(varLogic1 && varLogic2); //참&&참 > 참
+            console.log(varLogic1 || varLogic2); // 참||참 > 참
+
+            varLogic1 = false;
+            varLogic2 = false;
+            console.log(varLogic1 && varLogic2); //거짓&&거짓> 거짓
+            console.log(varLogic1 || varLogic2); //거짓||거짓 >거짓
+            
+            /*부정 연산자*/
+            var varTrue = true;
+            console.log("varTrue : " + varTrue); //true
+            console.log("!varTrue : " + !varTrue); //false
+
+            /*복합대입 연산자*/
+
+            var varComplex = 100;
+            varComplex += 3;
+            console.log("varComplex : " + varComplex);
+
+            varComplex -= 3;
+            console.log("varComplex : " + varComplex);
+        </script>
+    </head>
+    <body></body>
+</html>
