@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+//크기를 지정하지 않은 배열 객체 생성
+var varArr1 = new Array();
+//크기를 지정한 배열 객체 생성
+var varArr2 = new Array(5);
+//배열 생성과 데이터 저장을 동시에
+var varArr3 = new Array(123, "abc", true, function fun() {}, {}, undefined);
+var varArr4 = [123, "abc", true, function fun() {}, {}, undefined]; //[]은 배열 {}은 객체
+//int[] arr = new int[5];
+console.log("varArr1 : " + varArr1);
+console.log("varArr2 : " + varArr2);
+console.log("varArr3 : " + varArr3);
+console.log("varArr4 : " + varArr4);
+
+var varArr = new Array(0, 1, 2, 3, 4, 5);
+            console.log("varArr.length : " + varArr.length);
+            console.log(varArr);
+
+            var varArr2 = new Array(100); //1개를 넣으면 길이
+            console.log("varArr2.length : " + varArr2.length);
+            console.log(varArr2);
+            //indexOf
+            var varArrIndex = new Array(123, "ABC", "가나다", "abc", "가나다", "123");
+            console.log("varArrIndex.indexOf(\"가나다\") : " + varArrIndex.indexOf("가나다"));
+            console.log(
+                "varArrIndex.lastIndexOf(\"가나다\") : " + varArrIndex.lastIndexOf("가나다")
+            );
+            console.log("varArrIndex.indexOf(123) : " + varArrIndex.indexOf(123));
+            console.log("varArrIndex.LastIndexOf(123) : " + varArrIndex.lastIndexOf(123));
+
+            //concat immutable. 원본 훼손을 안한다. 불변.
+            var varArrFir = new Array("ABC", "DEF", "GHI", "JKL");
+            var varArrSec = new Array("가나다", "라마다", "사아차", "카타파");
+            var varArrRes = varArrFir.concat(varArrSec); 
+            console.log("varArrFir: " + varArrFir + ":" + varArrFir.length);
+            console.log("varArrSec: " + varArrSec + ":" + varArrSec.length);
+            console.log("varArrRes: " + varArrRes + ":" + varArrRes.length)
+
+            //join immutable. 원본 훼손을 안한다. 불변.
+            var varArrJoin = new Array("AB", "CD", "EF", "HI");
+            console.log("varArrJoin : " + varArrJoin + " : " + varArrJoin.length);
+            console.log("varArrJoin : " + varArrJoin.join() + " : " + varArrJoin.length);
+            console.log("varArrJoin : " + varArrJoin + " : " + varArrJoin.length);
+
+            console.log("varArrJoin : " + varArrJoin.join(" : "));
+            console.log("varArrJoin : " + varArrJoin + " : " + varArrJoin.length);
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>
