@@ -20,34 +20,31 @@
 알고리즘: int a = 10 int b =20 두수를 바꾸기
 배열 또는 List 에 3, 4, 5, 6, 10 입력 Max 값 구하기
 
-package new_test;
-
-public class test50 {
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 	 int a = 10;
 	 int b = 20;
-	 System.out.println("a : " + a + ",b: " + b);
+	 System.out.println("a : " + a + ", b: " + b);
 	 
 	 int c = a;
-	  a = b;
+	 a = b;
 	 b = c;
 	 
-	 System.out.println("a: " + a + ",b: " + b);
+	 System.out.println("a: " + a + ", b: " + b);
 	 
-	 int num = {3,4,5,6,10};
+	 int[] num = {3,4,5,6,10};
 	 
 	 int max = num[0];
 	 
 	 for(int i = 0; i <num.length; i ++ ) {
 		 if(max < num[i] ) {
-			 mas = num[i];
+			 max = num[i];
 		 }
 	 }
 System.out.println("Max : " + max);
 	}
 
 }
+
 
 51번
 로또 번호를 Set 을 활용하여 짜시오
