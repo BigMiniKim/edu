@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function Scoring(player,scoreFirst, scoreSecond, scoreThird){
+this.player =player;
+this.scoreFirst =scoreFirst;
+this.scoreSecond =scoreSecond;
+this.scoreThird =scoreThird;
+
+/*this.getTotal = function() {
+    return this.scoreFirst +this.scoreSecond +this.scoreThird;
+};
+
+this.getAverage = function() {
+    return(this.getTotal()/3).toFixed(3);
+    
+};
+
+let score = new Scoring("홍길동", 100 , 90 ,80);
+console.log(score.getTotal());
+console.log(score.getAverage());
+//Number.prototype.toFixed();
+//toFixed()메서드는 고정 소수점 표현법
+//toFixed(3) : xx.123 까지 표현
+*/
+};
+Scoring.prototype.getTotal = function() {
+    return this.scoreFirst +this.scoreSecond+this.scoreThird;
+};
+
+Scoring.prototype.getAverage =function() {
+    return(this.getTotal()/3).toFixed(3);
+};
+
+let player1 = new Scoring("홍길동", 99, 90,92);
+console.log(player1.player + "의 총점 : " + player1.getTotal());
+console.log(player1.player + "의 평균 : " + player1.getAverage());
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
