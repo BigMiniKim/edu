@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    let strEn = "ABCDEFE";
+    let strKo = new String("가나다라맙사아");
+    String.prototype.temp = 123;
+
+    console.log("strEn : " + strEn);
+    console.log("strKo : " + strKo);
+
+    console.log("strEn.length : " + strEn.length);
+
+    console.log("strEn.constructor : "  + strEn.constructor);
+    console.log("strKo.constructor : " + strKo.constructor);
+
+    console.log("strEn.temp : " + strEn.temp);
+    console.log("strKo.temp : " + strKo.temp);
+
+    console.log("charAt() : " + strEn.charAt(3));
+    console.log("indexOf() : " + strEn.indexOf("E") );
+    console.log("lastIndexOf()" + strEn.lastIndexOf("E"));
+    console.log("concat()" + strEn.concat("abcedf")); 
+    console.log("replace() : " +strEn.replace("A", "a") );
+    console.log("split() : " +strEn.split("C") );
+    console.log("slice() : " +strEn.slice(2,4));
+    console.log("substring() : " +strEn.substring(1,4) );
+
+    let lc = strEn.toLocaleLowerCase();
+    console.log("lc : " + lc);
+    let up = strEn = lc.toUpperCase();
+    console.log("up : " + up);
+
+    //Object객체
+    function ObjName(){
+        this.pro = "property";
+        this.met = function met() {};
+
+    };
+    ObjName.prototype.temp = 123;
+    let obj = new ObjName();
+    console.log("obj.constructor : " +obj.constructor);
+    console.log("obj.temp : " + obj.temp);
+
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

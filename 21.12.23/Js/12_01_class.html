@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+class Person{
+  //let name; <<안됨
+  constructor(name,age,city){
+    this.name = name;
+    this.age= age;
+    this.city=city;
+  }
+  
+  getName(){
+    return this.name;
+}
+}
+let kim = new Person('kim','6','seoul');
+console.log(kim);
+console.log(kim,getName());
+
+
+
+/*
+class Person{
+  int age;
+  String name;
+  Person(int age){
+    this.age = age;
+  }*/
+
+/*
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Person = function () {
+  //let name; <<안됨
+  function Person(name, age, city) {
+    _classCallCheck(this, Person);
+
+    this.name = name;
+    this.age = age;
+    this.city = city;
+  }
+
+  _createClass(Person, [{
+    key: 'getName',
+    value: function getName() {
+      return this.name;
+    }
+  }]);
+
+  return Person;
+}();
+
+var kim = new Person('kim', '6', 'seoul');
+console.log(kim);
+console.log(kim, getName());
+
+/*
+class Person{
+  int age;
+  String name;
+  Person(int age){
+    this.age = age;
+  }*/
+    
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>
