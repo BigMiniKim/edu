@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            /* window.onload = () => {
+                 $("p").css("width" , "500px");
+                 $("p").css("height" , "300px");
+                 $("p").css("border" , "3px solid #cccccc");
+
+             }
+
+             window.onload = () => {
+             $("p").css("fontSize" , "2em");
+
+            }*/
+
+            $(document).ready( () => {
+                $("p").css("width" , "500px");
+                $("p").css("height" , "300px");
+                $("p").css("border" , "3px solid #cccccc");
+            }
+            );
+
+            $().ready(() => {
+                $("p").css("color", "red");
+            }
+            );
+
+            $(function() {
+                $("p").css("fontSize", "5em");
+            }
+            );
+            $(() => {
+                $("p").css("color", "blue");
+            }
+            );
+        </script>
+    </head>
+
+    <body>
+
+        <p>
+            Hello jQuery!
+        </p>
+
+    </body>
+
+</html>

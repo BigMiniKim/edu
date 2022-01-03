@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+          $(document).ready( ()=> {
+
+            $("*").css("fontSize", "1.1em");	//전체 선택자
+			$("li").css("color", "#0000ff");	//태그 선택자
+			$("#item").css("background", "#ffff00").css("width", "300px");	//아이디 선택자
+			$(".seoul").css("background", "#ff0000");	//클래스 선택자
+			$("#wrap p").css("border", "2px solid #cccccc");	//후손 선택자
+			$("#wrap > p").css("border", "5px solid #cccccc");	//자손 선택자
+
+
+
+          }
+
+
+
+
+
+          ); 
+
+
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+			<p>jQuery selector</p>
+			<div id="centent">
+				<h1>centent</h1>
+				<p>ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅌ</p>
+				<p>ABCDEFGHIJKLMN</p>
+			</div>
+			<div id="item">
+				<ul>
+					<li class="seoul">서울</li>
+					<li class="gyeonggi_do">경기도</li>
+					<li>충청도</li>
+					<li>전라도</li>
+					<li>경상도</li>
+					<li>강원도</li>
+					<li>제주도</li>
+				</ul>
+			</div>
+		</div>
+    </body>
+
+</html>

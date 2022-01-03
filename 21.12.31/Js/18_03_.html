@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+          $(document).ready( ()=> {
+
+            $("input[type ='text']").css("color", "#ff0000");	
+			$("input[type ='password']").css("color", "#0000ff");
+			$("input:submit").css("fontSize", "1.2em");		
+
+
+          }
+
+
+
+
+
+          ); 
+
+
+        </script>
+    </head>
+
+    <body>
+		<form>
+			UserID <input type="text">
+			<br />
+			UserPW <input type="password">
+			<br />
+			Submit <input type="submit" value="submit">
+			<br />
+			Reset <input type="reset" value="reset">
+			<br />
+			Food <br />
+			사과<input type="checkbox" id="apple" value="사과" />
+			바나나<input type="checkbox" id="banana" value="바나나" checked />
+			수박<input type="checkbox" id="watermelon" value="수박" />
+			<br />
+			
+			<ul>
+				<li>이만기</li>
+				<li>이승엽</li>
+				<li>이종범</li>
+				<li>이재학</li>
+				<li>이순철</li>
+				<li>이길동</li>
+				<li>이동국</li>
+			</ul>
+		</form>
+    </body>
+
+</html>
