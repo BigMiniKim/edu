@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                let wrapObj = $("#wrap");
+                let divObj = $("<div> Hello jQuery </div>");
+                divObj.appendTo(wrapObj); //addchild
+                divObj.css("background", "#ff0000");
+
+                // <a>객체 생성 및 추가
+                let aObj = $(
+                    "<a href='http://www.google.com' target='_blank'> google </a><br>"
+                );
+                aObj.appendTo(wrapObj);
+
+                let imgObj = $(
+                    "<img src = 'img/logo.png'/><br>"
+                );
+                imgObj.appendTo(wrapObj);
+
+                let tempObj = {
+                    src : "img/arm_mbed.png",
+                    width : 297,
+                    height : 124,
+                    border : "5px"
+                }
+                
+                let imgAObj = $("<img>",tempObj)
+                imgAObj.appendTo(wrapObj);
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+    </body>
+</html>

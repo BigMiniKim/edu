@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+                     $(document).ready(function(){
+         
+         let wrapObj = $("#wrap");
+         
+         /*
+            객체 생성
+         */
+         let divObj = $("<div> Hello jQuery! </div>");
+         
+         /*
+            객체 삽입
+         */
+         
+         //divObj.appendTo(wrapObj);      //.appendTo() 부모.(자식)
+         //wrapObj.append(divObj);      //.append() 
+         //divObj.prependTo(wrapObj);   //.prependTo()
+         //wrapObj.prepend(divObj);      //.prepend()
+         
+         //divObj.insertAfter(wrapObj);   //.insertAfter()
+         //wrapObj.after(divObj);      //.after()
+         divObj.insertBefore(wrapObj);   //.insertBefore()
+         //wrapObj.before(divObj);      //.before()
+         
+      });
+        </script>
+
+    </head>
+    <body>
+        
+        <div id="wrap">
+               <div>contents</div>
+            </div>
+    </body>
+</html>

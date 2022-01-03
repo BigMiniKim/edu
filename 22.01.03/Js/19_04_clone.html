@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+			
+			$(document).ready(function(){
+			
+			let co =$("#wrap > .contents1 > .p").clone();
+			co.appendTo($("#wrap > .contents1"));
+				//($("#wrap > .contents1 > .p").clone()).appendTo($("#wrap > .contents1"));
+				//$("#wrap > .contents1").append($("#wrap > .contents1 > .p").clone());
+				
+			})
+		</script>
+		
+		<style>
+			#wrap .contents1 .p {
+			   background: #ff0000;
+			}
+			
+			#wrap .contents2 .p {
+			   background: #ffff00;
+			}
+		 </style>
+	  </head>
+	  
+	  <body>
+		 
+		 <div id="wrap">
+			<div class="contents1">
+			   <p class="p">contents1</p>
+			</div>
+		 </div>
+		 </body>
+</html>
