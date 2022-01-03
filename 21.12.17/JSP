@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            function funName() {
+
+                return;
+            }
+
+            var returnFun = function (x) {
+                for (let i = 1; i < 10; i++) {
+
+                    console.log(x + " * " + i + "=" + (
+                        x * i
+                    ));
+                }
+
+            }
+
+            returnFun(3);
+
+            function funName() {
+
+                return function (x) {
+                    for (let i = 1; i < 10; i++) {
+
+                        console.log(x + " * " + i + "=" + (x * i));
+                    }
+                }
+			
+            }
+			const fun1 = funName();
+			fun1(3);
+
+			
+        </script>
+    </head>
+    <body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+/*String grade(int avg) {
+    return "수";
+}*/
+
+function funName() {
+    console.log("명시적 선언입니다.");
+}
+var funAnnoymous = function () {
+    console.log("익명 함수 선언입니다");
+}
+
+funName();
+funAnnoymous();
+
+function funName(x, y, z) {
+				console.log("x : " + x);
+				console.log("y : " + y);
+				console.log("z : " + z);
+				
+				var result = x * y + z;
+				
+				return result;
+			}
+var result = 0;
+result = funName(2,3,4);
+console.log(result);
+
+result = funName(2,3,4,5);
+console.log(result);
+result = funName(2,3);
+console.log(result);
+
+/*
+				arguments
+			*/
+			var varArr;
+			
+			function funName() {
+				
+				return arguments;
+			}
+			
+			varArr = funName(1, 2, 3, 4, 5, 6, 7);
+			console.log("varArr : " + varArr);
+			console.log("varArr.length : " + varArr.length);
+			
+			for(var i in varArr) {
+				console.log("varArr[" + i + "] :" + varArr[i]);
+			}
+			
+			console.log("---------------------------------------");
+			
+			varArr = funName("A", "B", "C", "D");
+			console.log("varArr : " + varArr);
+			console.log("varArr.length : " + varArr.length);
+			
+			for(var i in varArr) {
+				console.log("varArr[" + i + "] :" + varArr[i]);
+			}
+
+            /* 함수 실행 순서*/
+            fun1(); //정상실행
+            //fun2(); //오류 발생
+
+            //명시(선언)적 함수 생성
+            function fun1(){
+                console.log("fun1 run!");
+            }
+
+            //익명 함수 생성
+             var fun2 = function() {
+                 console.log("fun2 run!")
+             }
+             fun2(); //정상 실행
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function funTower() {
+
+return function(x) {
+    for(let i = 1; i <=5; i++) {
+
+        for(let j = 1; j <=i; j++){
+            document.write("*");
+
+        }
+        document.write("<br>");
+    }
+}
+
+}
+
+
+var returnTower = funTower();
+returnTower(5);
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+
+            function funTower() {
+                return function (x) {
+                    for (let i = 1; i <= 5; i++) {
+                        for (let j = 1; j <= i; j++) {
+                            document.write("*");
+                        }
+                        document.write("<br>")
+                    }
+                }
+            }
+            var returnTower = funTower();
+            returnTower(5);
+
+
+            /*클로저 : free variable(자유변수)에 의해서 함수가 닫혀(close0) 있다.*/
+            function funName(x) {
+                
+                var varName = " :: 요청한 " + x + "에대한 구구단::";
+
+                return function () {
+                    console.log(varName);
+                    for (var i = 1; i < 10; i++) {
+                        console.log(x + "*" + i + "= " + (x * i));
+                    }
+                }
+            }
+
+            //지역 변수에 접근할 수 없다.(에러발생)
+            //consol.log("varName : " + varName);
+
+            var returnFun = funName(5);
+            returnFun();
+        </script>
+    </head>
+    <body></body>
+</html>
