@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #cEventAdd {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+
+            #cEventRem {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #0f0;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+        <script>
+            window.onload = () => {
+                function addHandler() {
+                    console.log("Click!!!")
+                }
+                function removeHandler() {
+                    console.log("event remove!!")
+
+                    ceA.removeEventListener("click", addHandler);
+                }
+
+                let ceA = document.querySelector("#cEventAdd");
+                ceA.addEventListener("click",addHandler); //콜백함수, addHandler()는 함수 실행
+           
+         
+            let ceR = document.querySelector("#cEventRem");
+                ceR.addEventListener("click",removeHandler);
+        };
+        </script>
+    </head>
+    <body>
+        <div id="cEventAdd">
+            Click event</div>
+        <div id="cEventRem">
+            Click event</div>
+
+    </body>
+</html>

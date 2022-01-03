@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #cEvent {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+        <script>
+            /*function hearderClick() {
+                console.log("click!!")
+            }*/
+            const hearderClick = () => {
+                console.log("click!!")
+                //이벤트 제거
+                let ce = document.getElementById("cEvent");
+                console.log(ce);
+                ce.onclick = null;
+            }
+        </script>
+    </head>
+    <body>
+        <div id = "cEvent" onclick = " hearderClick()"> Click event</div>
+        <!--<div id="cEvent" onclick=" console.log('oooooooooo')">
+            Click event</div>-->
+    </body>
+</html>
