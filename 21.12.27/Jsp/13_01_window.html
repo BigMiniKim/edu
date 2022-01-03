@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+let newWindow = window.open("http://www.google.com" , "google", "width =500, height= 500");
+//위치 조정 x=50, y=50에 위치한다
+newWindow.moveTo(50,50);
+
+for(let i =0; i<1000; i++){
+    newWindow.moveBy(1,1);
+}
+
+//사이즈 조정
+newWindow.resizeTo(500,600);
+for(let i = 0 ; i<200 ; i++);{
+newWindow.resizeBy(-1,-1);
+}
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
