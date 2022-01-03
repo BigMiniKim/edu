@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+alert("내장함수");
+console.log("내장함수: 콘솔로그")
+
+/*let timeoutId= setTimeout(
+    function(){
+    alert("3초 후 한번 실행합니다");
+},3000)*/
+
+
+/*let timeExec = function() {
+    alert("2초 후 한번 실행")
+};*/
+
+//let timeoutId = setTimeout(timeExec, 2000);
+//clearTimeout(timeoutId);
+
+/*let timeExec = function() {
+    console.log("2초 후 한번 실행")
+    document.write("2초 후 한번 실행합니다")
+};
+let timeIntervalId = setInterval(timeExec, 2000);
+clearTimeout(timeoutId);*/
+
+let timeExec = function() {
+    console.log("2초 후 한번 실행")
+    document.write("2초 후 한번 실행합니다")
+};
+
+var printTimeoutId = setTimeout(
+function() {
+clearInterval(timeIntervalId);
+console.log("종료!! ㅎㅎ")
+},20*1000);
+
+var timeIntervalId = setInterval(timeExec, 2000) ;
+//clearTimeout(timeoutId);
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

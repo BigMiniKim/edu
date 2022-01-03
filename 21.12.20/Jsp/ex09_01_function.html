@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*내부함수 :함수 안의 또다른 함수*/
+            function outFun(width, height) {
+
+                console.log("triangle" + tirangle());
+                console.log("quadrangle" + quadrangle());
+
+                function tirangle() {
+                    /*outFun(3,5) 이건 안됨. 내부함수로 외부에서는 호출불가*/
+                    return (width * height) / 2;
+                }
+
+                function quadrangle() {
+                    return width * height;
+                }
+                console.log("triangle" + tirangle());
+                console.log("quadrangle" + quadrangle());
+            }
+            outFun(3, 5)
+
+            /*콜백함수: 매개변수로 함수를 전달*/
+            function funName(funCBF, funCBP, num) {
+                for (let i = 1; i <= 10; i++) {
+                    console.log(num + "*" + i + " = " + (
+                        num * i
+                    ))
+                    if (i < 10) 
+                        funCBP(i);
+
+                    }
+
+                    funCBF();
+                
+            }
+
+
+            function funCallBackProgress(n) {
+                console.log((n*10) + "% 진행 완료!!!");
+            }
+            function funCallBackFinish() {
+                console.log("서버 작업 종료!!!");
+            }
+
+            funName(funCallBackFinish, funCallBackProgress, 7);
+        </script>
+    </head>
+    <body></body>
+</html>
