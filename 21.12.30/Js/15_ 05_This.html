@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+			#objDiv {
+				width: 200px; height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: #f00;
+				color: #fff;
+				font-weight: bolder;
+			}
+			
+			#objPar {
+				width: 200px; height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-size: 1.2em;
+				background-color: #0f0;
+				color: #fff;
+				font-weight: bolder;
+			}
+		</style>
+        <script>
+            //let objD; let objP; 선언하면 위로 끌어 올리겠다. 호이스팅
+            //따라서 위에 함수가 있는데 아래에 먹힘
+
+            //this 는 호출한 놈꺼. objD.style.backgroundColor = "black" objP.style.....
+			window.onload = function() {
+				function addHandler(){
+					console.log("click!!");
+					console.log("this : " + this);
+					
+					this.style.backgroundColor = "black";
+					
+				};
+			
+				let objD = document.getElementById("objDiv");
+				objD.addEventListener("click", addHandler, false);
+			
+				let objP = document.getElementById("objPar");
+				objP.addEventListener("click", addHandler, false);
+			};
+			
+		</script>
+		
+		
+	</head>
+	
+	<body>
+	
+		<div id="objDiv">Object Division</div>
+		<p id="objPar">Object Paragraph</p>
+	
+	</body>
+</html>

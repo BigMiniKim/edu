@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       
+        <script>
+            window.onload =() => {
+               /*let sbmBtn = document.querySelector("#sbmBtn");
+                
+                sbmBtn.onclick = ()=>{
+                    if(document.getElementById("id").value == ""){
+                        alert("유저 아이디 없음")
+                    }else if(document.getElementById("pw").value == ""){
+                        alert("패스워드 없음");
+                    }else{
+                        alert("로그인 ok");
+                        document.getElementById("loginForm").submit();
+                    }
+
+                };*/
+
+                let If = document.getElementById("loginForm");
+                If. onsubmit =() => {
+                    if(document.getElementById("id").value == "") {
+                        alert("유저 아이디 없음");
+                        return false;
+                    }else if (document.getElementById("pw").value == "") {
+                        alert("패스워드 없음");
+                        return false;
+                    }else{
+                        alert("로그인ok");
+                        return true;
+                    }
+                }
+
+            };
+        
+        </script>
+
+    </head>
+
+    <body>
+      <!--  <form id ="loginForm" action="http://www.daum.net">
+            user id : <input id ="id" name = "id" type ="text"><br>
+            user pw : <input id ="pw" name = "pw" type ="password"><br>
+            <input id = "sbmBtn" type="button" value="제출">
+            <input id = "reset" type="button" value="리셋">
+        </form>-->
+====================================================================
+        <form id ="loginForm" action="http://www.daum.net">
+            user id : <input id ="id" name = "id" type ="text"><br>
+            user pw : <input id ="pw" name = "pw" type ="password"><br>
+            <input id = "sbmBtn" type="submit" value="제출">
+            <input id = "reset" type="reset" value="리셋">
+        </form>
+    </body>
+</html>
