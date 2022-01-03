@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            window.onload = () => {
+
+                /*let imgNode = document.createElement("img");
+    imgNode.setAttribute("src","./img/logo.png");
+    imgNode.setAttribute("width",170);
+    imgNode.setAttribute("height",67);
+
+    document.body.appendChild(imgNode);*/
+
+                /*let str = "";
+    str += "<p>  javascript & node.js  </p>";
+    str += "<img src ='./img/logo.png',";
+    str+= "width = '170', heigth='67'>";
+    document.body.innerHTML = str;*/
+
+               let str = "";
+                str += "<p id = 'jsTitle'> javascript & node.js </p>";
+                str += "<img id ='logoImg', src ='./img/logo.png',";
+                str += "width = '170', heigth='76'>";
+                document.body.innerHTML = str;
+
+               let titleNode = document.getElementById("jsTitle");
+                //titleNode.innerHTML = "JS & 노드";
+            titleNode.parentNode.removeChild(titleNode);
+        
+            let logoNode=document.getElementById("logoImg");
+            logoNode.parentNode.removeChild(logoNode);
+        
+        }
+
+        
+        </script>
+    </head>
+    <body></body>
+</html>
