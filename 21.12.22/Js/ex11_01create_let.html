@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function createCar(name, color, speed) {
+let carObj = {
+    name : name,
+    color : color ,
+    speed : speed,
+    run : function() {
+        return this.speed + "km/h";
+    }
+};
+return carObj;
+
+}
+
+let sorento = createCar("sorento", "grey" , 220);
+console.log("sorento.name ; " + sorento.name);
+console.log("sorento.run : " + sorento.run())
+
+
+let soul = createCar("soul", "white", 180);
+console.log("soul.name : " + soul.name);
+console.log("soule.run : " + soul.run());
+
+
+//생성자를 이용한 객체 생성
+function Airplane(name, color, speed) {
+//this = {}
+
+this.name = name;
+this.color = color;
+this.speed = speed;
+
+this.fly = function() {
+    return this. speed + " fly!"
+};
+//return this; 함수에서는 생략된 형태
+};
+let boeing747 = new Airplane("boeing747", "white/blue", "600km/h");
+console.log("boeing747.name : " +  boeing747.name);
+console.log("boeing747.color : " +  boeing747.color);
+console.log("boeing747.fly : " +  boeing747.fly);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
