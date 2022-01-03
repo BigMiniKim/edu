@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){ 
+				 
+				 $('#siss').click(function(){
+					 $('#imgRSP').attr("src","arm_mbed.png")
+				 });
+	 
+				 $('#rock').click(function(){
+					 $('#imgRSP').attr("src","logo.png")
+				 })
+	 
+				 $('#paper').click(function(){
+					 $('#imgRSP').attr("src","arm_mbed.png")
+				 })
+	 
+			 });
+		 </script>
+	 </head>
+	 <body>
+		 <img id="imgRSP" src = "img/logo.png">
+	 
+		 <input id="siss" type="button" value="가위">
+		 <input id="rock" type="button" value="바위">
+		 <input id="paper" type="button" value="보">
+		 
+	 
+	 </body>
+	 </html>
+	 
