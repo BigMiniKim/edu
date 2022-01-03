@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            function funName() {
+
+                return;
+            }
+
+            var returnFun = function (x) {
+                for (let i = 1; i < 10; i++) {
+
+                    console.log(x + " * " + i + "=" + (
+                        x * i
+                    ));
+                }
+
+            }
+
+            returnFun(3);
+
+            function funName() {
+
+                return function (x) {
+                    for (let i = 1; i < 10; i++) {
+
+                        console.log(x + " * " + i + "=" + (x * i));
+                    }
+                }
+			
+            }
+			const fun1 = funName();
+			fun1(3);
+
+			
+        </script>
+    </head>
+    <body></body>
+</html>
