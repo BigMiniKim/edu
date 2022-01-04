@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+      function Grade (kor, eng, mat){
+
+this.kor = Number(kor);
+this.eng = Number(eng);
+this.mat = Number(mat);
+
+this.tot = function(){
+    return this.kor + this.eng + this.mat;
+};
+
+this.avg = function(){
+    return (this.kor + this.eng + this.mat)/3.0;
+};
+
+};
+
+
+$(document).ready(function(){
+
+$("#tot").click(function(){
+    console.log("kor----- : " + $("#kor").val());
+    
+    //var grade = new Grade($("#kor").val(), $("#eng").val(),$("#mat").val() );
+
+    //console.log("tot ===== : " + grade.tot());
+    //console.log("avg ===== : " + grade.avg());
+
+});
+
+$("#avg").click(function(){
+
+    
+    var grade = new Grade($("#kor").val(), $("#eng").val(),$("#mat").val() );
+
+    console.log("tot ===== : " + grade.tot());
+    console.log("avg ===== : " + grade.avg());
+    
+    var divObj = $('<div>  평균은 '+ grade.avg() +  ' </div>' + '<div>  총점은 '+ grade.tot() +  ' </div>');
+   
+    $("#wrap").empty();
+    $("#wrap").append(divObj);
+    
+});
+
+$("#rst").click(function(){                              
+    $("#wrap").empty();
+    
+    //$("#resultDiv").remove();
+    $("#kor" ).val('');
+    $("#eng").val('');
+    $("#mat").val('');
+});
+
+
+});
+</script>
+</head>
+</head>
+    <body>
+        국어 :
+        <input type="text" id="kor"><br>
+        영어 :
+        <input type="text" id="eng"><br>
+        수학 :
+        <input type="text" id="mat"><br>
+      
+        <input type="button" id = "avg" value="평균">
+        <input type="reset"  id = "rst" value="리셋">
+        <div id= "wrap">
+        </div>
+    </body>
+</html>
