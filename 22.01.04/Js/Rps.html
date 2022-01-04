@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready( () => {
+                $('#sis').click( () => {
+                    $('#imgRPS').attr("src", "./img/sis.jpg")
+                });
+                $('#rock').click( () => {
+                    $('#imgRPS').attr("src", "./img/rock.jpg")
+                })
+                $('#paper').click( () => {
+                    $('#imgRPS').attr("src", "./img/paper.jpg")
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <img id ="imgRPS" src = "./img/logo.png">
+
+        <input id ="sis" type ="button" value="가위">
+        <input id ="rock" type ="button" value="바위">
+        <input id ="paper" type ="button" value="보">
+         
+        </body>
+</html>

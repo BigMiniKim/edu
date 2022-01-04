@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+
+function Result(ojr)
+{
+   var vKor = parseInt(document.getElementById("kor").value);
+   var vEng = parseInt(document.getElementById("eng").value);
+   var vMat = parseInt(document.getElementById("mat").value);
+   var vResult = 0;
+   var vSum = parseInt(vKor+vEng+vMat);
+   var vAvg = Math.round(vSum/3);
+   
+   document.getElementById("tot").value = vSum;
+   document.getElementById("avg").value = vAvg;
+         
+   
+   if(vKor>=40 && vEng>=40 && vMat>=40 && vAvg>=60)
+      vResult = "합격";
+   else if (vAvg>=60)
+      vResult = "과락";
+   else
+      vResult = "불합격";
+      
+      
+   
+
+   
+   document.getElementById("result").value = vResult;
+}
+
+
+</script>
+</head>
+<body >
+
+<!-- 사용자로부터 이름, 국어점수, 영어점수, 수학점수를 입력받아
+     평균 점수와 판정 결과를 출력하는 페이지를 구성한다.
+     판정결과는 합격, 과락, 불합격 중 하나로 처리된다.
+     
+     합격은 모든 과목 점수가 40점 이상이면서 평균이 60점 이상인 경우
+     과락은 평균이 60점 이상이지만, 한 과목이라도 과목 점수가 40점 미만인 경우
+     불합격은 평균이 60점 미만인 경우로 한다. 
+     
+   HTML, CSS, Javascript 활용
+-->
+<form>
+   <h1 >성적 판정 결과 시스템</h1>
+   <hr class ="one">
+<div>
+이름 : <input type="text" id="name" size="10" maxlength="10" style="width: 60px"><br>
+국어 : <input type="text" id="kor" size="3" maxlength="3" style="width: 30px; margin-left:30px"><br>
+영어 : <input type="text" id="eng" size="3" maxlength="3" style="width: 30px; margin-left:30px"><br>
+수학 : <input type="text" id="mat" size="3" maxlength="3" style="width: 30px; margin-left:30px"><br><br>
+   <input type ="button"class = "btn" style="width: 50px" value ="결과" onclick= "Result(this)">
+   <input type ="reset" class="btn" id="btnSet" style="width: 50px" value = "취소"><br><br>
+합계 : <input type="text" id="tot" size="3" maxlength="3" style="width: 40px; margin-left:20px"><br>
+평균 : <input type="text" id="avg" size="3" maxlength="3" style="width: 40px; margin-left:20px"><br>
+<br>
+판정결과 : <input type="text" class ="tx" id="result" size="10" maxlength="5" style="width: 60px"><br>
+</div>
+</form>
+
+
+</body>
+</html>
+    </body>
+</html>
