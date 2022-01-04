@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(() => {
+                function Grade(kor, eng, math) {
+
+                    this.kor = kor;
+                    this.eng = eng;
+                    this.math = math;
+                    this.getTotal = function () {
+                        return this.kor + this.eng + this.math;
+                    }
+                    this.getAvg = function () {
+                        return (this.kor + this.eng + this.math) / 3.0
+                    }
+
+                };
+
+                let grade = new Grade(
+                    Number(prompt("점수입력", "국어점수")),
+                    Number(prompt("점수입력", "영어점수")),
+                    Number(prompt("점수입력", "수학점수"))
+                )
+                $("#kor").attr("value", grade.kor);
+                $("#eng").attr("value", grade.eng);
+                $("#math").attr("value", grade.math);
+                $("#result").click(() => {
+                    $(".gradebox").append("총점 : " + grade.getTotal());
+                    $(".gradebox").append("평균 : " + grade.getAvg());
+
+                });
+            });
+        </script>
+    </head>
+    <body>
+        국어 :
+        <input type="text" id="kor">
+        영어 :
+        <input type="text" id="eng">
+        수학 :
+        <input type="text" id="math">
+        평균 :
+        <input type="button" id = "result" value="결과">
+  <div class = "gradebox"></div>
+    </body>
+</html>
