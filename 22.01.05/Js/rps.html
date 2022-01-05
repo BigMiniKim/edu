@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Javascript</title>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+      <script>
+         $(document).ready( () => {
+               
+               function Grade(kor, eng, math){
+                  this.kor = kor;
+                  this.eng = eng;
+                  this.math = math;
+                  
+                  this.tot = () =>{
+                     return this.kor + this.eng +  this.math;
+                  }
+
+                  this.avg = () =>{
+                     return (this.kor + this.eng +  this.math) / 3.0;
+                  }
+
+               };
+
+               $("#avg").click( () => {
+                  let kor =  Number($("#kor").val());
+                  let eng =  Number($("#eng").val());
+                  let mat =  Number($("#mat").val());
+                  
+                  let grade = new Grade(kor, eng ,mat);
+
+                  console.log("tot ===== : " + grade.tot());
+                        console.log("avg ===== : " + grade.avg());
+
+                  let divObj = $('<div>  평균은 '+ grade.avg() +  ' </div>' + '<div>  총점은 '+ grade.tot() +  ' </div>');   
+                  $("#wrap").empty();
+                  $("#wrap").append(divObj);
+                  
+               });
+
+               $("#rst").click( () =>{
+                  $("#wrap").empty();
+
+                  $("#kor" ).val(0);
+                        $("#eng").val(0);
+                        $("#mat").val(0);
+
+               });
+
+
+            }
+
+
+         );
+         
+      </script>
+   
+   </head>
+   
+   <body>
+   
+         국어점수<input id="kor" type="text" name="kor"><br>
+         영어점수<input id="eng" type="text" name="eng"> <br>
+         수학점수<input id="mat" type="text" name ="mat"><br>
+         <input id="avg" type="button" value="평균">
+         <input id="rst" type="button" value="리셋">
+
+         <div id="wrap">
+            평균들어갈 자리
+         </div>
+
+   </body>
+
+
+
+</html>
