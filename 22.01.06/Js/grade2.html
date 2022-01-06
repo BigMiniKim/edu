@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Javascript</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(() => {
+                function Grade(kor, eng, math) {
+                    this.kor = Number(kor);
+                    this.eng = Number(eng);
+                    this.math = Number(math);
+
+                    this.sum = () => {
+                        return this.kor + this.eng + this.math;
+                    }
+
+                    this.avg = () => {
+                        return (this.kor + this.eng + this.math) / 3.0;
+
+                    }
+                };
+                $("#avg").click(() => {
+                   
+
+                    let grade = new Grade ($("#kor").val(), $("#eng").val(), $("#math").val());
+
+                    let divObj = $(
+                        '<div> 평균은 ' + grade.avg() + '</div><div> 총점은 ' + grade.sum() + '</div>'
+                    );
+
+                    $("#wrap").empty();
+                    $("#wrap").append(divObj);
+
+                });
+
+                $("#rst").click(() => {
+                    $("#wrap").empty();
+
+                    $("#kor").val('');
+                    $("#eng").val('');
+                    $("#math").val('');
+                })
+
+            });
+        </script>
+    </head>
+    <body>
+        국어
+        <input id="kor" type="text" name="kor">
+        <br>
+        영어
+        <input id="eng" type="text" name="eng">
+        <br>
+        수학
+        <input id="math" type="text" name="math">
+        <br>
+
+        <input id="avg" type="button" value="평균">
+        <input id="rst" type="button" value="리셋">
+
+        <div id="wrap"></div>
+
+    </body>
+
+</html>
