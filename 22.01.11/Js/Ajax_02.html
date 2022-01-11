@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+                //ajax =비동기 = 쓰레드 = 화면 안 깜빡 거림(react), (<form action = "method=">깜빡)
+
+                $.ajax({
+                    type: "get",
+                    url: "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+                    success: function (data) {
+                        console.log(data.squadName);
+                        console.log(data.members[2].name);
+                        console.log(data.members[2].powers[1]);
+                        //console.log(data);
+
+                    },
+                    error: (xhr, textStatus, errorThrown) => {
+                        // 	Error시, 처리
+                        consol.log(xhr);
+                        consol.log(textStatus);
+                        consol.log(errorThrown);
+                    }
+                    
+                });
+
+                console.log("비동기");
+            });
+        </script>
+
+        <style>
+            #wrap .contents1 .p {
+                background: #ff0000;
+            }
+
+            #wrap .contents2 .p {
+                background: #ffff00;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="wrap">
+            <div class="contents1">
+                <p class="p">contents1</p>
+            </div>
+        </div>
+
+    </body>
