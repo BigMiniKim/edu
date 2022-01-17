@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<hteml>
+    <head>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin="crossorigin"></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin="crossorigin"></script>
+        <!--라이브러리(스프링 코어를 내쪽으로. .jar)-->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script type = "text/babel">
+
+            function Hello() {
+                return <h1>Hello World</h1>
+
+            }
+            ReactDOM.render(<Hello/>,document.getElementById("mydiv"));
+
+            function Programer() {
+                return <h1>I am programmer</h1>
+
+            }
+            ReactDOM.render(<Programer/>,document.getElementById("mydiv"));
+            // $("#mydiv").append(<h1>I am programmer</h1>)
+        </script>
+    </body>
+</hteml>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<hteml>
+    <head>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin="crossorigin"></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin="crossorigin"></script>
+        <!--라이브러리(스프링 코어를 내쪽으로. .jar)-->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            class Car {
+                constructor(name) {
+                    this.name = name;
+
+                }
+
+                present() {
+                    return "My Car is " + this.name;
+                }
+            }
+
+            class Model extends Car {
+                constructor(name, model) {
+                    super(name); //부모에 있는 파라미터(17,18번째줄)
+                    this.model = model;
+                }
+                show() {
+                    return this.present() + ':::::' + this.model; //return super.present()
+
+                }
+
+            }
+            const youCar = new Model("Ford", "Mustang");
+            document.write(youCar.show());
+
+            //let myCar= new Ca("sm%"); console.log(myCar present())
+
+            let myCar = new Car("SM5");
+            console.log(myCar.present());
+            document.write(myCar.present());
+        </script>
+
+    </body>
+</hteml>
