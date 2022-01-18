@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<hteml>
+    <head>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin="crossorigin"></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin="crossorigin"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            
+            /* const hello = () => {
+                 return "hello world";
+             }*/
+
+            /*const hello = () => "hello world";
+            document.write( hello());*/
+           
+            /*const hello = (val) => {
+             return   "hello world" + val;
+            }
+            document.write( hello("world"));
+            */
+            
+            //Dsetructing = 객체 구조 분해
+
+            /*const vehiles = ['mustang', 'fly', 'bus'];
+
+            //옛날 방법
+             const car = vehiles[0];
+             const truck = vehiles[1];
+             const suv = vehiles[2];
+
+             document.write(car);
+             document.write(truck);
+             document.write(suv);*/
+
+            /*/새로운 방법
+
+            //const [car,truck,suv] = vehiles
+            //document.write(car);
+            //document.write(truck);
+            //document.write(suv);*/
+
+            /*const [car, ,suv] = vehiles
+
+            document.write(car);
+            //document.write(truck);
+            document.write(suv);*/
+
+            /*const calculator = (a, b) => {
+                const add = a + b;
+                const substract = a - b;
+                const multiply = a * b;
+                const divide = a / b;
+
+                return [add, substract, multiply, divide ];
+            }
+            const [add, sub, mul, div] = calculator(4, 7);
+            document.write(add);
+            document.write(sub);
+            document.write(mul);
+            document.write(div);*/
+
+            const car = {
+                brand : 'ford',
+                model : 'mustang',
+                type : 'car',
+                year : '2002'
+            }
+
+            //옛날
+            function myCar(car){
+                return 'my ' + car.type + ' is a ' + car.brand;
+            }
+
+            document.write(myCar(car));
+
+            //요즘
+
+            //const [ brand,model,type,year] = car;
+            
+            function myCar2({brand, mode, type, year}) {
+                return 'my ' + type + ' is a ' + brand;
+            }
+            document.write(myCar2(car));
+        </script>
+
+    </body>
+</hteml>

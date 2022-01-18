@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<hteml>
+    <head>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin="crossorigin"></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin="crossorigin"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+            class Car {
+                constructor(name) {
+
+                    this.name = name;
+                }
+
+                present() {
+
+                    return "My Car is " + this.name;
+                }
+            }
+
+            class Model extends Car {
+                constructor(name, model) {
+                    super(name);
+                    this.model = model;
+                }
+                show() {
+                    return this.present() + ' ::::' + this.model;
+                }
+
+            }
+
+            const youCar = new Model("Ford", "mustang");
+            //document.write(youCar.show());
+
+            //let myCar = new Car("SM5");
+            //console.log(myCar.present());
+            //document.write(myCar.present());
+            //var, lwt, const
+            //호이스팅 hoisting, tdz(temporary dead zone)
+            var number = 5;
+            console.log(number);
+            number = 6;
+            console.log(number);
+            let num = 5;
+            console.log(num);
+            num = 6
+            console.log(num);
+
+            const NUM_CONST = 5;
+            console.log(NUM_CONST);
+            NUM_CONST=6
+            console.log(NUM_CONST);
+
+
+            //for//function
+
+            function test(){
+//var a =undefined; 호이스팅의 범위는 함수안
+                if(true){
+
+                    var a = 5;
+
+                    console.log(a);
+                }
+                console.log(a);
+            }
+
+            test();
+            console.log(a);
+        </script>
+
+    </body>
+</hteml>
