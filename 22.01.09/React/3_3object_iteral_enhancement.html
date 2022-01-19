@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<hteml>
+    <head>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin="crossorigin"></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin="crossorigin"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <script>
+
+            let book = {
+                title: 'god',
+                writer: 'Bernard werber',
+                price: '21000'
+            };
+
+            let {title: a, writer: b, price: c} = book;
+            console.log(a, b, c);
+
+            let {
+                another = 'ants',
+                price
+            } = book;
+            document.write(another);
+            document.write(price);
+
+            //구조분해의 반대 객체 리터럴 개선(object literal enhancement)
+            let name = "백두산";
+            let elevation = 2744; //높이( 미터)
+
+            var print = function() {
+                console.log(this.name + "::" + this.elevation);
+
+            }
+            let funHike = {
+                name,
+                elevation,
+                print
+            };
+
+          
+            console.log(funHike);
+            console.log(funHike.name);
+            console.log(funHike.elevation);
+            funHike.print();
+        </script>
+
+    </body>
+</hteml>
