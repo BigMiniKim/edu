@@ -1,0 +1,223 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionBarSize">46dp</item>
+        <item name="actionBarSize">46dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="toolbarStyle">@style/myToolbarStyle</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+        <item name="android:actionButtonStyle">@style/actionButton</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="myToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="android:paddingLeft">11dp</item>
+        <item name="android:paddingRight">11dp</item>
+    </style>
+
+    <style name="BoldlStyle8spWhite">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">#4DFFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="NormalStyle12sp888888">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#888888</item>
+    </style>
+    <style name="NormalStyle12sp818181">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#818181</item>
+    </style>
+    <style name="NormalStyle13sp333333">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="NormalStyle13sp5b5b5b">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#5b5b5b</item>
+    </style>
+
+    <style name="BoldlStyle14sp384c74">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#384c74</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldlStyle15sp333333">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NormalStyle15sp333333">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="NormalStyle15sp5e5e5e">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#5e5e5e</item>
+    </style>
+
+    <style name="NormalStyle15spababab">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ababab</item>
+    </style>
+
+    <style name="NormalStyle15535353">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#535353</item>
+    </style>
+
+    <style name="BoldStyle15spff6e21">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ff6e21</item>
+    </style>
+
+    <style name="NormalStyle15spSeletor">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <!--        <item name="android:textColor">@color/text_btn_selector</item>-->
+    </style>
+    <style name="BoldeStyle16sp322e29">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#322e29</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NormalStyle16sp464646">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#464646</item>
+    </style>
+
+    <style name="NormalStyle16sp5e5e5e">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#5e5e5e</item>
+    </style>
+
+    <style name="BoldlStyle17sp161616">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#161616</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="BoldlStyle17sp1c446c">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#1c446c</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="NormalStyle17sp6767667">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#676767</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NormalStyle18spWhite">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="BoldlStyle18spWhite">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldlStyle18spBlack">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldlStyle18sp161616">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#161616</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldlStyle19sp333333">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldStyle20spWhite">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldStyle20sp161616">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#161616</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BoldStyle27spWhite">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">27sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="actionButton" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+
+</resources>

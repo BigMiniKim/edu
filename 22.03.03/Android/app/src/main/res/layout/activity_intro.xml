@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_sky"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:text="여행의 참맛! 머나먼 인생의 참맛!"
+        android:textAppearance="@style/NormalStyle18spWhite"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/intro_company"
+        android:textAppearance="@style/BoldStyle27spWhite"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_login"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/join_icon"
+            android:drawablePadding="7dp"
+            android:text="@string/join"
+            android:textAppearance="@style/BoldlStyle18spWhite" />
+
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:drawableLeft="@drawable/login_icon"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textAppearance="@style/BoldlStyle18spWhite" />
+
+
+
+
+
+</RelativeLayout>
+
+</LinearLayout>

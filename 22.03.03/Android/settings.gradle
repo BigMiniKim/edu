@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "공부어때"

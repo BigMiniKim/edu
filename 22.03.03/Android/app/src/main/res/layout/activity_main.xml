@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_sky"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여행의 참맛! 머나먼 인생의 참맛!"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_company"
+        android:textSize="27sp"
+        android:textColor="#fffff"
+
+        >
+
+
+    </TextView>
+</LinearLayout>
